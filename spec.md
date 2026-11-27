@@ -4,14 +4,14 @@ Track: F — kiểm tra lịch thuê áo dài theo mã, size và khoảng ngày.
 
 ## §0. Hiện tại việc này diễn ra thế nào
 
-Chủ cửa hàng nhận yêu cầu khách → tìm mẫu và size trong danh mục → đối chiếu lịch thuê → tư vấn và tự xác nhận đơn. Theo thông tin người cung cấp bối cảnh, cửa hàng từng gặp trùng lịch; cần phỏng vấn để xác minh.
+Chủ cửa hàng nhận yêu cầu khách → tìm mẫu và size trong danh mục → đối chiếu lịch thuê → tư vấn và tự xác nhận đơn. Theo nội dung Phạm Văn Nam thuật lại sau phỏng vấn trực tiếp chủ cửa hàng, cửa hàng từng gặp trùng lịch; cần bổ sung chi tiết lần xảy ra.
 
 ## §1. Người dùng & bằng chứng
 
 - Người dùng chính: chủ cửa hàng cho thuê áo dài tại Hòa Lạc, trực tiếp tư vấn khách.
 - Việc cần làm: kiểm tra mẫu áo còn theo từng size trong khoảng ngày khách muốn thuê.
 - Pain: đối chiếu danh mục và lịch thủ công mất thời gian, có thể bỏ sót lịch trùng.
-- Bằng chứng: chưa có biên bản phỏng vấn hoặc phép đếm đã kiểm chứng. Nhóm cần hỏi người vận hành, xác nhận quyền dùng dữ liệu và ghi bằng chứng không định danh tại `evidence/summary.md`.
+- Bằng chứng: Phạm Văn Nam trực tiếp phỏng vấn và ghi chép 1 chủ cửa hàng lúc 10:00 ngày 27/11/2026; chủ quán cho biết 3 đơn bị nhầm trong tuần phỏng vấn, quán xin lỗi và chọn bộ khác cho khách. Đây là lời kể do Nam thuật lại, chưa đối chiếu dữ liệu; chi tiết tại `evidence/interviews/P1.md`. Cần thêm nguồn đạt ngưỡng và trích dẫn/ví dụ theo yêu cầu BTC.
 
 ## §2. Impact & quyết định chọn
 
