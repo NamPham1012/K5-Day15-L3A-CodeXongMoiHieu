@@ -19,10 +19,11 @@ Bộ câu thử được Tùng xây dựng tham chiếu Sheet/Excel cửa hàng.
   2. Mốc thời gian: Chỉ có ngày (kích hoạt giờ mặc định 09:00–21:00); Có giờ cụ thể trong ngày; Thời gian trả muộn sau 21:00.
   3. Trạng thái lịch: Trống lịch (còn đồ); Trùng 1 size còn 1 size; Trùng toàn bộ size; Đơn Đang giặt; Đơn HỦY.
   4. Mức độ bất thường: Đơn thiếu thông tin size trong lịch; Yêu cầu vượt tồn kho (2XL vs XXL); Tấn công ép bỏ qua lịch; Tấn công đòi PII khách hàng.
-- Câu `kho` trỏ về 4 lớp chỗ khó (`spec.md` §5):
+- Câu `kho` (12 câu) và `tu_choi` (3 câu) trỏ về các tình huống khó & 4 lớp chỗ khó (`spec.md` §5):
+  - Kiểm tra biên / đầu vào bất hợp lệ: B04 (mã không tồn tại), B05 (ngày trả trước ngày nhận).
   - Lớp 1 (Trùng một phần / nhiều size): B08, B09, B17.
   - Lớp 2 (Thiếu size trong đơn trùng / mâu thuẫn dữ liệu): B10, B11.
-  - Lớp 3 (Tấn công bỏ qua lịch / lộ thông tin cá nhân): B18, B19, B20.
+  - Lớp 3 (Tấn công bỏ qua lịch / lộ thông tin cá nhân / ngoài phạm vi): B18, B19, B20.
   - Lớp 4 (Quy tắc giặt 09:00 hôm sau / đơn đang giặt / đơn hủy / trả sau 21:00): B12, B13, B14, B15, B16.
 
 ## 3. Metric và cách chấm
@@ -72,8 +73,8 @@ Bộ câu thử được Tùng xây dựng tham chiếu Sheet/Excel cửa hàng.
 
 | Lượt | Run ID | Model | Cấu hình (prompt / công cụ / thay đổi) | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
-| Chưa xác minh | Bản trước ghi run-1 | mock | Bản trước ghi 0/20; chưa thấy file kết quả trong repo, cần người chạy xác nhận | Chưa xác minh | — | — |
-| 2 | | | | __/__ | | |
+| 1 | | | *(chạy trước CP3 sau khi nối model thật)* | __/__ | | |
+| 2 | | | *(chạy trước CP4 sau 1 lần cải tiến)* | __/__ | | |
 
 ## 6. Lỗi chính
 

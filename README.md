@@ -1,6 +1,6 @@
 # CodeXongMoiHieu — Trợ lý kiểm tra lịch thuê áo dài
 
-**Track F ·  CP1.** Trợ lý hỗ trợ chủ cửa hàng kiểm tra áo dài còn hay trùng lịch theo từng size. Chủ cửa hàng đưa ra quyết định xác nhận đơn. Bằng chứng, dữ liệu thử và sản phẩm đang chuẩn bị.
+**Track F · Sau CP2 (chuẩn bị CP3).** Trợ lý hỗ trợ chủ cửa hàng kiểm tra áo dài còn hay trùng lịch theo từng size. Chủ cửa hàng đưa ra quyết định xác nhận đơn. Đã chốt thiết kế lát cắt, quy tắc nghiệp vụ, 20 câu thử, 4 metric và bản mock chạy cục bộ; đang hoàn thiện bằng chứng và nối model thật cho CP3.
 
 **Thành viên, lớp, track:** xem [TEAMS.md](TEAMS.md). **Điền TEAMS.md đúng format**: khi chấm và đánh giá, BTC quét file này để ghép điểm cho từng người.
 
@@ -18,7 +18,7 @@
 | Chấm cột `pass` theo metric spec | Chạy cả bộ một lệnh, có run ID, model, token từng câu (`run.py eval`) · tính % đạt (`run.py score`) |
 | Persona, số người dùng thật, giá model (`cost/personas.yaml`) | Sinh ~50 phiên, chạy thật qua bản chạy thử, tính chi phí / phiên, / task thành công, / tháng 3 kịch bản (`run.py simulate`) |
 
-Thiết kế và công cụ tra lịch của nhóm đang là bản nháp trong [spec.md](spec.md); code hiện tại vẫn là ví dụ starter, chưa phải sản phẩm kiểm tra lịch thuê.
+Thiết kế và quy tắc kiểm tra lịch của nhóm nằm trong [spec.md](spec.md); bản chạy thử hiện tại đang ở chế độ mock (nhận cú pháp cố định `MA_AO DD/MM/YYYY DD/MM/YYYY`, đọc dữ liệu giả lập mặc định `data/mock_rental.json`), chưa hiểu câu hỏi tự nhiên và chưa nối model thật.
 
 ## Chạy trong 3 phút
 
@@ -83,8 +83,9 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 
 | Thành phần | Thật / Giả | Ghi chú |
 |---|---|---|
-| Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model: ____ |
-|  |  |  |
+| Lời gọi AI ở quyết định trung tâm | **Giả ở CP2 · Thật từ CP3** | Hiện đang dùng `fake` để kiểm trace; nối model thật trước CP3 |
+| Công cụ tính lịch theo size & mốc 09:00–21:00 | **Thật** | Code Python trong `codebase/tools.py` (`check_availability`), đã có unit test |
+| Dữ liệu danh mục & lịch thuê | **Giả lập mặc định** | Mặc định đọc `data/mock_rental.json`; tùy chọn cục bộ `RENTAL_DATA_SOURCE=private` (không commit) |
 
 ## Dùng AI vào việc gì
 

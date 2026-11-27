@@ -66,7 +66,7 @@ flowchart LR
 
 **Trạng thái bản mock:** `python run.py` nhận đầu vào theo cú pháp cố định `MA_AO DD/MM/YYYY DD/MM/YYYY`, mặc định giờ nhận 09:00 và trả 21:00; đọc danh mục/lịch giả lập, tính số lượng theo size và hiển thị kết quả hoặc cảnh báo cần xác minh. Luồng gọi model `fake` để kiểm tra trace; kết quả hiển thị được code tạo, không phải model sinh. Chưa hiểu câu hỏi tự nhiên, chưa kết nối Sheet và chưa gọi model thật. Mô hình AI phân tích và diễn giải trong sơ đồ là thiết kế dự kiến, chưa được triển khai. Các ca còn/trùng, hủy, thiếu size và ranh giới 09:00 đã được nhóm chạy thử; không coi đây là kết quả benchmark chính thức.
 
-**Giới hạn:** thời gian sẵn sàng của đơn `Đang giặt` là dự kiến theo quy tắc chủ quán xác nhận, không chứng minh tình trạng thực tế; thiếu dữ liệu hoặc trả sau 21:00 vẫn cần xác minh. Công cụ `search_example` là phần mẫu không nằm trong luồng kiểm tra lịch.
+**Giới hạn:** thời gian sẵn sàng của đơn `Đang giặt` là dự kiến theo quy tắc chủ quán xác nhận, không chứng minh tình trạng thực tế; thiếu dữ liệu hoặc trả sau 21:00 vẫn cần xác minh.
 
 **Nguồn cục bộ bổ sung:** `data/rental.private.json` là bản trích cục bộ từ Sheet, được Git bỏ qua; chọn bằng `RENTAL_DATA_SOURCE=private`, mặc định vẫn là mock. Bản trích có 85 mã danh mục và 264 dòng lịch áo dài, không lưu tên khách. Đơn AD02 size L ngày 22/11 chỉ ghi ngày được áp dụng giờ giả định 09:00–21:00 theo xác nhận của Nam. Dữ liệu này là dữ liệu thật, không phải synthetic; xem giới hạn và xác minh tại `data/DATA_CARD.md`. Cần đối chiếu benchmark và xác minh quyền sử dụng trước khi đánh giá; không đưa dữ liệu cá nhân, file riêng hay trace nhạy cảm lên repo.
 
@@ -114,7 +114,8 @@ Không commit tên, số điện thoại, đơn hàng thật, nguyên Sheet ho�
 
 | Thời điểm | Đổi gì | Vì sao / căn cứ |
 |---|---|---|
-| | | |
+| 27/11/2026 (sau CP2) | Đồng bộ trạng thái ở `README.md`, `docs/ai-usage.md`, `eval/README.md`; xóa công cụ mẫu `search_example` và cập nhật docstring trong `codebase/tools.py`. Giữ nguyên `eval/benchmark.csv`, `eval/metric_spec.yaml` và chuẩn đạt §7. | Xử lý các lỗi đồng bộ tài liệu và mã mẫu thừa phát hiện khi audit sau CP2 mà không thay đổi chuẩn đánh giá đã chốt. |
+| 27/11/2026 (chuẩn bị CP3) | Hoàn tất đào data (`evidence/count.py`, `evidence/data-mining.md`, `evidence/summary.md`); cập nhật bản trích cục bộ `data/rental.private.json` theo xác nhận cửa hàng (dòng 89 `AD09` trả `02/11/2026`, loại dòng 206 `AD09` `"Chỉ quần"` vì không giữ áo dài). | Đạt ngưỡng bằng chứng R1 trước CP3 và làm sạch dữ liệu `AD09` (giúp `B02`, `B07` khớp nguồn mà không sửa benchmark). |
 
 **Sau CP4**
 

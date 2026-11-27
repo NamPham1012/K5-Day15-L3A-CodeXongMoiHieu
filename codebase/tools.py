@@ -18,13 +18,6 @@ from tracing import tool, TOOLS  # noqa: F401  (TOOLS: danh sách công cụ đ�
 
 
 @tool
-def search_example(query: str) -> list:
-    """(ví dụ — thay bằng công cụ của nhóm) Tra dữ liệu mẫu theo câu hỏi.
-    Input: câu hỏi (str). Output: danh sách đoạn {"code", "text"}. Không tác động ra ngoài."""
-    return [{"code": "VD-1", "text": "(ví dụ) đoạn dữ liệu giả — thay bằng dữ liệu thật của bài toán"}]
-
-
-@tool
 def get_mock_data() -> dict:
     """Đọc danh mục và lịch theo nguồn được chọn.
 
@@ -50,7 +43,7 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
 
     Input: mã áo, thời gian nhận và trả dạng ISO YYYY-MM-DDTHH:MM:SS.
     Output: kết quả từng size hoặc thông báo cần xác minh.
-    Tác động ra ngoài: không; chỉ đọc dữ liệu giả lập.
+    Tác động ra ngoài: không; chỉ đọc file cục bộ theo RENTAL_DATA_SOURCE (mặc định mock).
     """
     try:
         start = datetime.fromisoformat(nhan_luc)
