@@ -103,7 +103,7 @@ flowchart LR
 - Ai có thể bị hại nếu AI sai, và nhóm chặn thế nào: học viên có thể hiểu sai kiến thức; chặn bằng retrieval giới hạn, kiểm mã đoạn, abstain và chuyển TA khi thiếu căn cứ.
 
 ## §10. Phân công & changelog
-- Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): __
+- Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): Nguyễn Bá Quảng — product, bằng chứng, spec, checkpoint và demo; Vũ Thanh Toàn — AI engineering, code, model và an toàn; Sỹ Tùng — data, benchmark, đánh giá và chi phí. Khi review chéo: Quảng duyệt benchmark/chi phí, Tùng duyệt output và metric, Toàn duyệt tính chạy được của toàn bộ luồng.
 - Dùng AI vào việc gì (2–3 dòng; chi tiết `docs/ai-usage.md`): dùng coding agent để khởi tạo repo từ starter, soát yêu cầu BTC và tạo bản nháp Canvas/spec. Nhóm phải kiểm lại mọi quyết định sản phẩm, số liệu và nội dung trước khi commit/nộp.
 - Nhật ký thay đổi — **mọi thay đổi sau CP2 19:30 Thứ Sáu 27/11 phải có dòng ở đây**:
 

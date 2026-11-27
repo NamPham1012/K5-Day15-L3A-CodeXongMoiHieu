@@ -42,4 +42,4 @@ Khung chỉ dùng thư viện chuẩn của Python. Thêm thư viện thì ghi v
 
 - Ngôn ngữ trả lời người dùng: tiếng Việt; thuật ngữ kỹ thuật có thể giữ tiếng Anh khi rõ nghĩa hơn.
 - Phong cách code / đặt tên: Python chuẩn PEP 8, tên hàm và biến dùng `snake_case`, ưu tiên thư viện chuẩn và hàm nhỏ dễ kiểm thử.
-- Ai duyệt thay đổi do agent tạo trước khi commit: đội trưởng hoặc người sở hữu file được ghi trong `TEAMS.md`.
+- Ai duyệt thay đổi do agent tạo trước khi commit: đội trưởng Nguyễn Bá Quảng hoặc người sở hữu file được ghi trong `TEAMS.md`.

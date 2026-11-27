@@ -11,9 +11,9 @@
 
 | STT | Họ và tên | Mã học viên | Vai trò | Phần việc chính |
 |---|---|---|---|---|
-| 1 | ____ | ____ | Đội trưởng | ____ |
-| 2 | ____ | ____ | Thành viên | ____ |
-| 3 | ____ | ____ | Thành viên | ____ |
+| 1 | Nguyễn Bá Quảng | 2A202603555 | Đội trưởng | Product, bằng chứng, spec, checkpoint và demo |
+| 2 | Vũ Thanh Toàn | 2A202603654 | Thành viên | AI engineering, code, model và an toàn |
+| 3 | Sỹ Tùng | 2A202603650 | Thành viên | Data, benchmark, đánh giá và chi phí |
 
 **Quy tắc điền**
 - **Lớp:** `L3A` hoặc `L3B`. **Track:** một chữ `A` (EdTech), `B` (Y tế), `C` (Du lịch), `D` (Thương mại điện tử), `E` (Tài chính) hoặc `F` (Làn khác). **Link repo:** link GitHub công khai của nhóm.
