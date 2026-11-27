@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MiênAI · Trợ lý kiểm tra lịch thuê áo dài</title>
+  <meta name="description" content="MiênAI giúp chủ shop cho thuê áo dài hỏi nhanh mẫu nào còn size nào theo ngày thuê, có tính cả thời gian giặt.">
+  <meta name="theme-color" content="#F6F0E4">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@500;600&amp;subset=vietnamese&amp;display=swap">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <a class="skip" href="#askText">Bỏ qua tới ô hỏi</a>
+
+  <!-- Ảnh áo trang trí hai bên (máy tính). Ảnh tách từ file mẫu của cửa hàng: webapp/extract_images.py -->
+  <div class="deco deco-left" aria-hidden="true">
+    <figure class="arch arch-a"><img src="/img/ao-1.jpg" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="arch arch-b"><img src="/img/ao-3.jpg" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="arch arch-c"><img src="/img/ao-5.jpg" alt="" loading="lazy" decoding="async"></figure>
+  </div>
+  <div class="deco deco-right" aria-hidden="true">
+    <figure class="arch arch-a"><img src="/img/ao-6.jpg" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="arch arch-b"><img src="/img/ao-2.jpg" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="arch arch-c"><img src="/img/ao-4.jpg" alt="" loading="lazy" decoding="async"></figure>
+  </div>
+
+  <div class="page">
+    <header class="masthead" data-enter>
+      <div class="mast-row">
+        <div class="seal" aria-hidden="true"><span>Miên</span></div>
+        <div class="mast-text">
+          <p class="brand">MiênAI</p>
+          <h1 class="greet">Chào chị chủ, em kiểm tra áo giúp chị nhé</h1>
+        </div>
+      </div>
+      <div class="mast-meta">
+        <span id="demoBadge" class="badge">Bản demo</span>
+        <span id="aiStatus" class="status" data-state="loading" role="status"><span class="dot" aria-hidden="true"></span><span id="aiStatusText">Đang kiểm tra AI…</span></span>
+      </div>
+    </header>
+
+    <!-- Dải ảnh trên điện thoại -->
+    <div class="strip" aria-hidden="true">
+      <figure class="arch"><img src="/img/ao-1.jpg" alt="" decoding="async"></figure>
+      <figure class="arch"><img src="/img/ao-6.jpg" alt="" decoding="async"></figure>
+      <figure class="arch"><img src="/img/ao-2.jpg" alt="" decoding="async"></figure>
+      <figure class="arch"><img src="/img/ao-4.jpg" alt="" decoding="async"></figure>
+    </div>
+
+    <main class="chat-area" id="main">
+      <div id="aiBanner" class="banner" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+        <p><strong>Chưa có API key</strong> — AI chưa hoạt động, em chỉ hiểu cú pháp <code>MÃ DD/MM/YYYY DD/MM/YYYY</code>, ví dụ <code>AD02 28/11/2026 29/11/2026</code>.</p>
+      </div>
+      <div id="chatLog" class="chat-log" aria-live="polite" aria-atomic="false">
+        <div class="msg-row">
+          <div class="bubble bubble-ai bubble-hello">
+            <p>Chị gõ <strong>mã áo</strong> và <strong>ngày nhận, ngày trả</strong>, em xem từng size còn hay hết, tính cả thời gian giặt.</p>
+            <p id="helloHint" class="hello-hint"></p>
+          </div>
+        </div>
+        <div class="examples" id="examples">
+          <p class="examples-title">Thử nhanh</p>
+          <div class="examples-row" id="examplesRow"></div>
+        </div>
+      </div>
+    </main>
+
+    <form id="askForm" class="composer" autocomplete="off">
+      <label for="askText" class="sr-only">Câu hỏi cho trợ lý</label>
+      <textarea id="askText" class="composer-input" rows="1" maxlength="500" placeholder="VD: AD02 28/11/2026 29/11/2026" aria-describedby="askNote"></textarea>
+      <button type="submit" id="askBtn" class="send-btn" aria-label="Gửi câu hỏi">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </button>
+      <p id="askNote" class="composer-note">Enter để gửi · Shift+Enter xuống dòng · mỗi câu là một lượt riêng</p>
+    </form>
+
+    <footer class="foot">
+      <p id="footNote">Bản demo: chưa nối Google Sheet.</p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
