@@ -1,52 +1,44 @@
 # Mô phỏng chi phí khi dùng thật — điền ở guide bước 4.2.
-# Ôn lại: ngày 13, ngày 1, ngày 14 · lab ngày 13, lab ngày 14.
-# Mọi số phải có nguồn (data / phỏng vấn / khảo sát / quy mô khoá có nguồn) hoặc ghi rõ "(tự ước tính)".
-# Chạy: python run.py simulate --try   (10 phiên, kiểm khung — làm trước CP3)
-#       python run.py simulate         (đủ số phiên dưới đây — bản nộp CP4)
-# Thay mọi dòng "(ví dụ)" bằng số và nguồn của nhóm; simulate nhắc nếu còn sót.
+# Mọi số phải có nguồn (data / phỏng vấn / khảo sát) hoặc ghi rõ "(tự ước tính)".
+# Chạy: python run.py simulate --try   (10 phiên, kiểm khung — trước CP3)
+#       python run.py simulate --rate-from eval/run-2.csv   (50 phiên — bản nộp CP4)
 
 sessions: 50        # số phiên mô phỏng — bản nộp ≥50
 seed: 42            # giữ cố định để chạy lại ra cùng chuỗi phiên
 
-users:              # số người dùng thật nếu đưa vào dùng — 3 kịch bản, ở quy mô thật của sản phẩm
-                    # track A: khoá học · track B–F: người dùng của sản phẩm / nhóm nhắm tới, nguồn công khai có link
-  low: 300
-  base: 700
-  high: 1000
-  source: "(ví dụ) track A — thay bằng số của nhóm. Cơ sở: lớp L3 hơn 700 học viên (README hackathon); thấp, cao: (tự ước tính)"
+users:              # quy mô người dùng: chủ cửa hàng / nhân viên tư vấn thuê áo dài tại khu vực Hòa Lạc & Hà Nội
+  low: 5            # 1 cửa hàng hiện tại + 4 cửa hàng lân cận (tự ước tính)
+  base: 20          # 20 cửa hàng cho thuê áo dài/trang phục nhỏ (tự ước tính)
+  high: 50          # 50 cửa hàng nếu mở rộng khu vực Hà Nội (tự ước tính)
+  source: "Track F — hiện tại 1 chủ cửa hàng trực tiếp (P1.md); quy mô mở rộng thấp (5), cơ sở (20), cao (50) là (tự ước tính) cho các tiệm cho thuê trang phục quản lý bằng Google Sheets."
 
-personas:           # ≥3 kiểu người dùng; share cộng lại = 1
-  - name: dung_it
-    share: 0.5              # tỉ lệ người dùng kiểu này
-    uses_per_month: 4       # số phiên / người / tháng
-    turns_per_session: 1    # số lượt hỏi trong một phiên
-    source: "(ví dụ) phỏng vấn P1, P3 — thay bằng nguồn của nhóm"
-  - name: dung_vua
-    share: 0.3
-    uses_per_month: 10
-    turns_per_session: 3
-    source: "(ví dụ) khảo sát n = 24, câu 3"
-  - name: dung_nhieu
+personas:           # 3 kiểu tần suất hỏi của chủ cửa hàng / nhân viên tư vấn; share cộng lại = 1
+  - name: cua_hang_nho_ngay_thuong
+    share: 0.4
+    uses_per_month: 30        # ~1 phiên/ngày (tự ước tính)
+    turns_per_session: 2      # ~2 câu hỏi/phiên (tự ước tính)
+    source: "P1.md cho biết chủ quán tự tra lịch khi khách hỏi; tần suất ngày thường ~60 lượt/tháng là (tự ước tính)."
+  - name: cua_hang_vua_mua_chup_anh
+    share: 0.4
+    uses_per_month: 60        # ~2 phiên/ngày (tự ước tính)
+    turns_per_session: 3      # ~3 câu hỏi/phiên (~180 lượt/tháng, khớp mức ~150 lượt/tháng ở spec.md §2)
+    source: "Đối chiếu data đào (261 đơn hiệu lực / ~2 tháng ≈ 130 đơn/tháng tại 1 tiệm) và spec.md §2; số lượt hỏi ~180 lượt/tháng là (tự ước tính)."
+  - name: cua_hang_cao_diem_cuoi_tuan
     share: 0.2
-    uses_per_month: 20
-    turns_per_session: 5
-    source: "(ví dụ) data/preclass: đếm số lượt / người — cách đếm ở evidence/data-mining.md"
-# Mỗi lượt hỏi lấy ngẫu nhiên một đầu vào trong eval/benchmark.csv (type thuong và kho).
-# Persona hỏi kiểu riêng: thêm vào persona đó
-#     types: [thuong, kho, tu_choi]
-# hoặc
-#     inputs: ["câu hỏi kiểu 1", "câu hỏi kiểu 2"]
+    uses_per_month: 90        # ~3 phiên/ngày mùa kỷ yếu/Tết (tự ước tính)
+    turns_per_session: 4      # ~4 câu hỏi/phiên (tự ước tính)
+    source: "Mùa cao điểm cuối tuần/kỷ yếu khách hỏi nhiều size cùng lúc; tần suất ~360 lượt/tháng là (tự ước tính)."
 
-prices:             # USD / 1 triệu token — chép từ further-reading/model-prices.md của repo đề. ≥2 mức model
-  - model: gemini-3.1-flash-lite
-    input: 0.25
-    output: 1.50
-    source: "(ví dụ) https://ai.google.dev/gemini-api/docs/pricing · xem 25/11/2026"
-  - model: gemini-4-hydrogen
-    input: 1.50
-    output: 7.50
-    source: "(ví dụ) https://ai.google.dev/gemini-api/docs/pricing · xem 25/11/2026"
+prices:             # USD / 1 triệu token — ≥2 mức model
+  - model: gpt-4o-mini
+    input: 0.15
+    output: 0.60
+    source: "https://openai.com/api/pricing/ · kiểm tra 27/11/2026"
+  - model: gpt-4o
+    input: 2.50
+    output: 10.00
+    source: "https://openai.com/api/pricing/ · kiểm tra 27/11/2026"
 
-usd_to_vnd:         # tuỳ chọn: điền thì bản tóm tắt in thêm tiền Việt
-  rate:
-  source:
+usd_to_vnd:
+  rate: 25500
+  source: "Tỷ giá tham khảo (tự ước tính), tháng 11/2026"

@@ -57,8 +57,8 @@ Bộ câu thử được Tùng xây dựng tham chiếu Sheet/Excel cửa hàng.
    - Hai người cùng đưa câu đó ra phiên họp nhóm ngắn (≤ 10 phút), đối chiếu trực tiếp với `spec.md` §4 (Quy tắc đã nhận từ cửa hàng) và `spec.md` §5 (Các lớp chỗ khó).
    - Đội trưởng (Phạm Văn Nam) giữ vai trò trọng tài phân xử, thống nhất điểm chốt cuối cùng và ghi rõ biên bản lý do vào `eval/report.md`.
 
-- **Người thứ hai chấm thử:** bản trước ghi Toàn chấm 5 câu đầu khớp 5/5, nhưng chưa thấy hồ sơ kèm theo trong repo; chờ Tùng và Toàn xác nhận, cung cấp output và phiếu chấm trước khi coi là kết quả đã kiểm chứng.
-- LLM chấm: Hiện tại chưa sử dụng LLM chấm tự động, toàn bộ chấm bằng người để đảm bảo độ chính xác nghiệp vụ.
+- **Kết quả chấm mù 2 người Lượt 1 (`run-1.csv`):** Sỹ Tùng và Vũ Thanh Toàn chấm độc lập 20/20 câu, đồng thuận **15/20 (75%)**; 5 câu lệch (`B06, B07, B12, B15, B18`) được đội trưởng Phạm Văn Nam phân xử chốt `0` theo đúng tiêu chí nhị phân trong `pass_criterion`.
+- LLM chấm: Không sử dụng LLM chấm tự động, toàn bộ chấm bằng người để đảm bảo độ chính xác nghiệp vụ.
 - **Chuẩn đạt được đội trưởng chốt:** tổng ≥ 18/20 câu và đạt 3/3 câu từ chối. Hai người chấm thử độc lập cần khớp ≥ 4/5 output theo R4. Commit và nộp chuẩn trước CP2.
 
 ## 4. Lệnh
@@ -73,9 +73,9 @@ Bộ câu thử được Tùng xây dựng tham chiếu Sheet/Excel cửa hàng.
 
 | Lượt | Run ID | Model | Cấu hình (prompt / công cụ / thay đổi) | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
-| 1 | | | *(chạy trước CP3 sau khi nối model thật)* | __/__ | | |
-| 2 | | | *(chạy trước CP4 sau 1 lần cải tiến)* | __/__ | | |
+| 1 | `run-1@20261127-203557` | `gpt-4o-mini` | Workflow 3 bước (`agent.py` + `check_availability` trên `rental.private.json`) | 10/20 | 50% | Chưa đạt |
+| 2 | *(chạy trước CP4)* | | *(sau 1 lần cải tiến từ lỗi Lượt 1)* | __/__ | | |
 
 ## 6. Lỗi chính
 
-Chưa có kết quả chính thức đã chấm trong repo để tổng hợp; ghi sau khi chạy và phân tích kết quả thật. Bản mock hiện chỉ nhận cú pháp cố định và dữ liệu giả lập nhỏ.
+Từ Lượt 1 (`10/20 = 50%`), 4 nhóm lỗi chính gồm: (1) Trình bày thiếu căn cứ mốc giờ/quy tắc bắt buộc (`B06, B07, B12, B15`), (2) Chặn cứng truy vấn trước mốc `01/11/2026` & lệch phiên bản Sheet (`B08–B11`), (3) AI parse tự sửa ngày nghịch đảo (`B05`), và (4) Phân loại nhầm tấn công bỏ qua lịch sang từ chối ngoài phạm vi nên không gọi công cụ (`B18`). Xem chi tiết tại `eval/report.md`.
