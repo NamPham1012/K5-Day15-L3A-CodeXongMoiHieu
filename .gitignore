@@ -35,3 +35,8 @@ evidence/**/raw-*
 # Nguyên file data BTC cấp (data/preclass, data/training-ops… của repo đề): để ở đây, không commit
 data-btc
 data-btc/
+# File sinh ra bởi taste-skill (gate, lịch sử bốc thăm, ảnh chụp kiểm tra): không commit
+.taste-skill/
+web/shots/
+# Bản sao kit taste-skill (CSS/JS giao diện của web/): không commit; trang cần copy lại từ skill mới hiển thị đúng
+web/assets/

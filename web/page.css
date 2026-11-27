@@ -1,0 +1,76 @@
+/* CSS riêng của trang: chỉ phần kit không có (bảng kết quả, nhãn trạng thái, khối output).
+   Kit ép mỗi section bằng đúng 1 hoặc 2 màn hình; bảng kết quả dài hơn nên section ở đây cao theo nội dung. */
+
+main > :is(section, .section) { height: auto; min-height: 0; }
+main > :is(section, .section) > .wrap { height: auto; }
+main > .hero { height: auto; min-height: 0; }
+main > .hero > .wrap { height: auto; display: block; }
+main > .hero > .wrap > .hero-text { height: auto; }
+footer.closing { height: auto; min-height: 0; }
+footer.closing > .wrap { height: auto; }
+
+:root {
+  --ok-ink: #14532d; --ok-bg: #e5f4e4;
+  --bad-ink: #8a1c1c; --bad-bg: #fbebeb;
+  --warn-ink: #7a4a00; --warn-bg: #f9eeda;
+  --off-ink: var(--muted); --off-bg: var(--surface);
+}
+.sr-only, .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* khối output và mã */
+code, pre { font-family: var(--font-mono); font-size: var(--t-small); }
+pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.5; }
+.out, .demo-out pre { padding: var(--s-4); background: var(--surface); border-radius: var(--r-md); border: 1px solid var(--line); max-width: 100%; }
+.clip { max-height: calc(1.5em * 6 + 2px); overflow: hidden; }
+.cell details { margin-top: var(--s-2); }
+.cell summary { cursor: pointer; font-size: var(--t-small); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.cell details pre { margin-top: var(--s-2); }
+.via { display: block; margin-top: var(--s-2); font-size: var(--t-label); color: var(--muted); }
+#sent-text { overflow-wrap: anywhere; }
+#lookup-result { margin-top: var(--s-5); display: grid; gap: var(--s-4); }
+
+/* bảng */
+.table-wrap { width: 100%; }
+table.res { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: var(--t-small); }
+table.res th, table.res td { text-align: left; vertical-align: top; padding: var(--s-3) var(--s-3) var(--s-3) 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+table.res th { font-weight: 500; color: var(--muted); font-size: var(--t-label); }
+table.res td { font-size: var(--t-small); line-height: 1.5; }
+table.res .grouprow th { color: var(--ink); font-size: var(--t-body); padding-top: var(--s-6); border-bottom: 1px solid var(--line-strong); }
+table.res tr.is-chot td { background: var(--warn-bg); }
+table.res tr.is-chot td:first-child { padding-left: var(--s-3); }
+.q { margin-top: var(--s-2); font-weight: 500; color: var(--warn-ink); }
+.note { margin-top: var(--s-2); color: var(--muted); }
+.col-n { width: 5%; } .col-case { width: 15%; } .col-in { width: 20%; } .col-ex { width: 17%; } .col-act { width: 27%; } .col-st { width: 16%; }
+.bugs .col-n { width: 5%; } .bugs .col-in { width: 18%; } .bugs .col-ex { width: 16%; } .bugs .col-act { width: 27%; } .bugs .col-imp { width: 22%; } .bugs .col-st { width: 12%; }
+tr.is-fixed td { background: var(--ok-bg); }
+
+/* nhãn: chữ + chấm, không chỉ màu */
+.tag { display: inline-flex; align-items: center; gap: var(--s-2); padding: 2px var(--s-3); border-radius: 999px; font-size: var(--t-label); font-weight: 500; line-height: 1.5; white-space: nowrap; }
+.tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+.tag--dat { color: var(--ok-ink); background: var(--ok-bg); }
+.tag--truot { color: var(--bad-ink); background: var(--bad-bg); }
+.tag--mot_phan, .tag--can_chot { color: var(--warn-ink); background: var(--warn-bg); }
+.tag--chua_ho_tro { color: var(--off-ink); background: var(--off-bg); }
+.tag--cao { color: var(--bad-ink); background: var(--bad-bg); }
+.tag--trung_binh { color: var(--warn-ink); background: var(--warn-bg); }
+.tag--thap { color: var(--off-ink); background: var(--off-bg); }
+.imp { margin-top: var(--s-2); }
+
+.demo-out pre { margin-top: 0; }
+.demo-out { display: grid; gap: var(--s-3); }
+
+/* điện thoại: mỗi hàng thành một khối dọc */
+@media (max-width: 767px) {
+  table.res, table.res tbody, table.res tr, table.res td, table.res th { display: block; width: 100%; }
+  table.res thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.res colgroup { display: none; }
+  table.res tr { padding: var(--s-4) 0; border-bottom: 1px solid var(--line-strong); }
+  table.res td { border: 0; padding: var(--s-2) 0; }
+  table.res td::before { content: attr(data-label); display: block; font-size: var(--t-label); font-weight: 500; color: var(--muted); margin-bottom: var(--s-1); }
+  table.res .grouprow th { padding-top: var(--s-5); }
+  table.res tr.is-chot, table.res tr.is-fixed { padding-inline: var(--s-3); }
+  table.res tr.is-chot td, table.res tr.is-fixed td { background: transparent; }
+  table.res tr.is-chot { background: var(--warn-bg); }
+  table.res tr.is-fixed { background: var(--ok-bg); }
+  table.res tr.is-chot td:first-child { padding-left: 0; }
+}
