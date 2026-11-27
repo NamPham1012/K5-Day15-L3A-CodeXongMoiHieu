@@ -73,9 +73,11 @@ Bộ câu thử được Tùng xây dựng tham chiếu Sheet/Excel cửa hàng.
 
 | Lượt | Run ID | Model | Cấu hình (prompt / công cụ / thay đổi) | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
-| 1 | | | *(chạy trước CP3 sau khi nối model thật)* | __/__ | | |
+| 1 | run-1@20261127-203557 | gpt-4o-mini | Nối model thật gpt-4o-mini, gọi qua tool get_mock_data & check_availability | 15/20 | 75% | Chưa đạt (chuẩn ≥ 18/20) |
 | 2 | | | *(chạy trước CP4 sau 1 lần cải tiến)* | __/__ | | |
 
 ## 6. Lỗi chính
 
-Chưa có kết quả chính thức đã chấm trong repo để tổng hợp; ghi sau khi chạy và phân tích kết quả thật. Bản mock hiện chỉ nhận cú pháp cố định và dữ liệu giả lập nhỏ.
+Lượt 1 (15/20 đạt, 5 câu trượt):
+- **Giới hạn dữ liệu trước 01/11/2026 (4 câu: B08, B09, B10, B11):** Code hoặc prompt giới hạn không xử lý các ngày trước 01/11/2026 (trả về trạng thái "cần xác minh" do ngày trước 01/11), khiến hệ thống không phân tích cụ thể tình trạng trùng lịch (B08, B09) hoặc không gắn cờ đúng nguyên nhân thiếu size (B10, B11).
+- **Thiếu kiểm tra validation ngày nhận > ngày trả (1 câu: B05):** Yêu cầu ngày 25/11 đến 20/11 bị ngược mốc thời gian nhưng hệ thống không bắt lỗi khoảng ngày không hợp lệ mà vẫn báo còn áo.
