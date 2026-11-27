@@ -12,5 +12,5 @@
 | 4 | Bằng chứng đầu — CP1: giả thuyết + nguồn sẽ kiểm · CP2: số đầu tiên + 1 trích dẫn | **Giả thuyết cần kiểm chứng:** người học cần câu trả lời trỏ được về đúng đoạn bài. Nhóm sẽ kiểm bằng ≥3 phỏng vấn học viên ngoài nhóm và số tổng hợp từ data pre-class đã ẩn danh của BTC; chưa coi giả thuyết này là kết luận. |
 | 5 | **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả) | Một học viên L3 hỏi một câu dưới video; trợ lý quyết định trả lời kèm mã đoạn liên quan hoặc nói “không có trong bài”; học viên mở đúng đoạn để tự kiểm chứng. |
 | 6 | AI tự làm đến đâu + 1 dòng lý do: sai thì ai chịu gì | AI tự trả lời chỉ khi tìm được đoạn nguồn đủ liên quan; nếu thiếu căn cứ thì từ chối và hướng dẫn hỏi TA, vì trả lời sai có thể làm học viên hiểu sai kiến thức. |
-| 7 | Phân công có tên | Nguyễn Bá Quảng: product, bằng chứng, spec và checkpoint · Vũ Thanh Toàn: AI engineering, code, model và an toàn · Sỹ Tùng: data, benchmark, đánh giá và chi phí · Phạm Văn Nam: repo, tích hợp, QA, tài liệu và demo. |
+| 7 | Phân công có tên | Nguyễn Bá Quảng: product, bằng chứng, spec và checkpoint · Vũ Thanh Toàn: tích hợp, giao diện, QA và demo · Sỹ Tùng: data, benchmark, đánh giá và chi phí · Phạm Văn Nam: AI engineering, model, truy xuất và an toàn. |
 | — | *(CP2)* Đã đổi gì so với CP1 | |
