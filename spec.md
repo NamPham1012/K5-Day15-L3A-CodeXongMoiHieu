@@ -49,15 +49,14 @@ flowchart LR
 
 **Hình dạng:** workflow cố định dự kiến. Dùng code xác định xung đột; AI diễn giải câu hỏi và trình bày kết quả. Không cần nhiều agent cho lát cắt này.
 
-| Công cụ dự kiến | Input | Output | Tác động ra ngoài? |
+| Công cụ | Input | Output | Tác động ra ngoài? |
 |---|---|---|---|
-| get_inventory | mã áo | danh sách size, số lượng | Chỉ đọc |
-| get_rentals | mã áo, khoảng thời gian | lịch giả lập liên quan | Chỉ đọc |
-| check_availability | danh mục, lịch và khoảng thuê | kết quả theo size, căn cứ, dữ liệu thiếu | Không |
+| `get_mock_data` (đã có) | không | danh mục và lịch giả lập từ `data/mock_rental.json` | Không; đọc file cục bộ |
+| `check_availability` (đã có) | mã áo, thời gian nhận và trả | kết quả theo size, thời gian sẵn sàng hoặc cảnh báo dữ liệu thiếu | Không; đọc dữ liệu giả lập |
 
 **Mức tự động:** AI hỗ trợ tư vấn; chủ cửa hàng quyết định, xác nhận và cập nhật đơn.
 
-**Quy tắc đã nhận từ cửa hàng:** số đứng trước size là số lượng, không có số là một; `2XL` là 2 áo size XL, `XXL` là 1 áo size XXL. Đơn Khách đặt trước và Đang thuê giữ áo; HỦY bỏ qua; Đã hoàn tất mặc định trả đúng giờ dự kiến nhưng phải xét giặt/ủi. Đang giặt cần kiểm tra, không mặc định còn. Trả trước hoặc đúng 21:00 → sẵn sàng 09:00 sáng hôm sau; sau 21:00 cần xác minh. Phải xét đơn trước và sau theo số lượng tại từng thời điểm.
+**Quy tắc đã nhận từ cửa hàng:** số đứng trước size là số lượng, không có số là một; `2XL` là 2 áo size XL, `XXL` là 1 áo size XXL. Đơn Khách đặt trước và Đang thuê giữ áo; HỦY bỏ qua; Đã hoàn tất mặc định trả đúng giờ dự kiến nhưng phải xét giặt/ủi. Với `Đang giặt`, theo xác nhận chủ cửa hàng do Nam cung cấp, áo được tính sẵn sàng từ 09:00 ngày sau ngày trả dự kiến, kể cả khi trạng thái chưa cập nhật; trước mốc này vẫn giữ áo. Trả trước hoặc đúng 21:00 → sẵn sàng 09:00 sáng hôm sau; sau 21:00 cần xác minh. Phải xét đơn trước và sau theo số lượng tại từng thời điểm.
 
 **Quy tắc giờ đã được chủ cửa hàng chốt:** dùng giờ Việt Nam. Nếu câu hỏi chỉ có ngày, giả định khách nhận lúc 09:00 ngày bắt đầu và trả lúc 21:00 ngày kết thúc; áo sẵn sàng lại lúc 09:00 ngày tiếp theo. Luôn hiển thị các giờ giả định trong kết quả. Nếu câu hỏi có giờ, hiển thị và kiểm tra giờ thực tế được yêu cầu; áo sau giặt vẫn sẵn sàng từ 09:00 ngày hôm sau, không phải sau đúng 12 tiếng kể từ lúc khách trả. Ví dụ khách nhận lúc 17:00: áo đã sẵn sàng từ 09:00 nếu không có lịch chiếm hoặc dữ liệu mâu thuẫn trong khoảng liên quan; vẫn phải kiểm tra mọi đơn trước và sau. Khách bắt buộc trả không muộn hơn 21:00; thời gian trả sau 21:00 cần báo không phù hợp/nhờ xác minh, không tự coi là hợp lệ.
 
@@ -65,7 +64,9 @@ flowchart LR
 
 **Nguyên tắc:** G10 — thu hẹp phạm vi khi không chắc; giải thích căn cứ từ kết quả công cụ; không tự tác động ra ngoài hoặc tiết lộ dữ liệu cá nhân.
 
-**Trạng thái:** toàn bộ công cụ và workflow trên là thiết kế; code trong repo vẫn là ví dụ starter, model có thể đang ở chế độ giả.
+**Trạng thái bản mock:** `python run.py` nhận đầu vào theo cú pháp cố định `MA_AO DD/MM/YYYY DD/MM/YYYY`, mặc định giờ nhận 09:00 và trả 21:00; đọc danh mục/lịch giả lập, tính số lượng theo size và hiển thị kết quả hoặc cảnh báo cần xác minh. Luồng gọi model `fake` để kiểm tra trace; kết quả hiển thị được code tạo, không phải model sinh. Chưa hiểu câu hỏi tự nhiên, chưa kết nối Sheet và chưa gọi model thật. Mô hình AI phân tích và diễn giải trong sơ đồ là thiết kế dự kiến, chưa được triển khai. Các ca còn/trùng, hủy, thiếu size và ranh giới 09:00 đã được nhóm chạy thử; không coi đây là kết quả benchmark chính thức.
+
+**Giới hạn:** thời gian sẵn sàng của đơn `Đang giặt` là dự kiến theo quy tắc chủ quán xác nhận, không chứng minh tình trạng thực tế; thiếu dữ liệu hoặc trả sau 21:00 vẫn cần xác minh. Công cụ `search_example` là phần mẫu không nằm trong luồng kiểm tra lịch.
 
 ## §5. Chỗ khó và tấn công
 
