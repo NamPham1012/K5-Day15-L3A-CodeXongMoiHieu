@@ -9,19 +9,17 @@ Hợp đồng (giữ nguyên để khung đo được token):
     @model_call (từ tracing.py) tự ghi mỗi lần gọi vào trace; agent.py gọi call_model bao nhiêu lần
     cũng được, khung tự cộng token.
     Lỗi gọi model (hết lượt, sai key, mất mạng): cứ để exception bay ra — khung ghi lỗi vào cột error.
-
-Chế độ giả (mặc định khi .env chưa có MODEL_PROVIDER, hoặc MODEL_PROVIDER=fake):
-    trả một câu giả cố định, model "fake", token 0 — để luồng chạy hết từ trước CP2 (guide bước 3.2).
-    Lượt `run.py eval` / `run.py simulate` chạy bằng model giả KHÔNG được tính.
-
-Nối model thật: điền .env (chép từ .env.example), rồi viết nhánh gọi API ở dưới theo docs/connect-model.md
-(có ví dụ OpenAI, Claude, model chạy trên máy, và cách nối nhà cung cấp khác). Không dán API key vào file này.
 """
+import json
 import os
+import urllib.error
+import urllib.request
 
 from tracing import model_call
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SHOW_RAW = False
+URL_OPENAI = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1/chat/completions").strip()
 
 
 def load_env(path=os.path.join(ROOT, ".env")):
@@ -41,16 +39,82 @@ load_env()
 MODEL_PROVIDER = (os.environ.get("MODEL_PROVIDER") or "fake").strip().lower()
 MODEL_NAME = (os.environ.get("MODEL_NAME") or "").strip()
 API_KEY = (os.environ.get("API_KEY") or "").strip()
+URL_OPENAI = (os.environ.get("OPENAI_BASE_URL") or "https://api.openai.com/v1/chat/completions").strip()
+
+
+def post_json(url: str, headers: dict, body: dict, timeout: int = 60) -> dict:
+    """Gửi POST JSON, trả về JSON phản hồi. Chỉ dùng thư viện chuẩn (urllib)."""
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        method="POST",
+        headers=dict({"Content-Type": "application/json"}, **headers),
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as err:
+        detail = err.read().decode("utf-8", "replace")[:400]
+        raise RuntimeError(f"HTTP {err.code}: {detail}") from err
+    if SHOW_RAW:
+        print(json.dumps(data, ensure_ascii=False, indent=2)[:3000])
+    return data
+
+
+URL_OPENAI_DEFAULT = "https://api.openai.com/v1/chat/completions"
+URL_OPENROUTER = "https://openrouter.ai/api/v1/chat/completions"
+
+
+def call_openai(system: str, user: str) -> dict:
+    """Gọi Chat Completions API của OpenAI hoặc OpenRouter (tương thích OpenAI)."""
+    if not MODEL_NAME or not API_KEY:
+        raise RuntimeError("Thiếu MODEL_NAME hoặc API_KEY trong .env.")
+
+    is_openrouter = MODEL_PROVIDER == "openrouter" or API_KEY.startswith("sk-or-")
+    url = os.environ.get("OPENAI_BASE_URL", "").strip() or (
+        URL_OPENROUTER if is_openrouter else URL_OPENAI_DEFAULT
+    )
+    request_model = MODEL_NAME
+    if is_openrouter and "/" not in request_model and MODEL_PROVIDER == "openai":
+        request_model = f"openai/{request_model}"
+
+    messages = ([{"role": "system", "content": system}] if system else []) + [
+        {"role": "user", "content": user}
+    ]
+    data = post_json(
+        url,
+        {"Authorization": "Bearer " + API_KEY},
+        {"model": request_model, "messages": messages},
+    )
+    usage = data["usage"]
+    return {
+        "text": data["choices"][0]["message"]["content"] or "",
+        "tokens_in": int(usage["prompt_tokens"]),
+        "tokens_out": int(usage["completion_tokens"]),
+    }
 
 
 @model_call
 def call_model(system: str, user: str) -> dict:
     if MODEL_PROVIDER == "fake":
         last = (user.strip().splitlines() or [""])[-1]
-        return {"text": "[câu trả lời giả — chưa nối model] " + last[:60], "model": "fake", "tokens_in": 0, "tokens_out": 0}
+        return {
+            "text": "[câu trả lời giả — chưa nối model] " + last[:60],
+            "model": "fake",
+            "tokens_in": 0,
+            "tokens_out": 0,
+        }
 
-    # NHÓM VIẾT: gọi model thật ở đây (theo MODEL_PROVIDER, MODEL_NAME, API_KEY) rồi trả đúng 4 khoá.
-    # Ví dụ chép được cho từng nhà cung cấp: docs/connect-model.md mục 2.
+    if MODEL_PROVIDER in {"openai", "openrouter"}:
+        result = call_openai(system, user)
+        return {
+            "text": result["text"],
+            "model": MODEL_NAME,
+            "tokens_in": result["tokens_in"],
+            "tokens_out": result["tokens_out"],
+        }
+
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
-        % MODEL_PROVIDER)
+        % MODEL_PROVIDER
+    )

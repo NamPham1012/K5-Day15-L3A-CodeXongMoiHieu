@@ -26,7 +26,7 @@ def get_mock_data() -> dict:
     Tác động ra ngoài: không; chỉ đọc file cục bộ.
     """
     root = Path(__file__).resolve().parent.parent
-    source = os.environ.get("RENTAL_DATA_SOURCE", "mock").strip().lower()
+    source = os.environ.get("RENTAL_DATA_SOURCE", "private").strip().lower()
     if source not in {"mock", "private"}:
         raise ValueError("RENTAL_DATA_SOURCE phải là mock hoặc private")
     data_path = root / "data" / (
@@ -60,7 +60,7 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
     if returned.time() > time(21, 0):
         return {"trang_thai": "can_xac_minh", "ly_do": "Khách phải trả không muộn hơn 21:00."}
 
-    source = os.environ.get("RENTAL_DATA_SOURCE", "mock").strip().lower()
+    source = os.environ.get("RENTAL_DATA_SOURCE", "private").strip().lower()
     if source == "private" and start.date() < datetime(2026, 11, 1).date():
         return {
             "trang_thai": "can_xac_minh",
@@ -107,8 +107,10 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
     if not inventory.get("sizes"):
         return {"trang_thai": "can_xac_minh", "ly_do": "Chưa đọc được size trong danh mục; cần xác minh."}
 
-    # Lưu các khoảng thời gian đã được giữ cho từng size.
+    # Lưu các khoảng thời gian đã được giữ cho từng size và căn cứ đơn liên quan.
     intervals = {size: [] for size in inventory["sizes"]}
+    related_rentals = []
+    cancelled_rentals = []
 
     for rental in data["rentals"]:
         if rental.get("ma_ao") != ma_ao:
@@ -117,6 +119,14 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
         status = rental.get("trang_thai", "").strip()
 
         if status.casefold() in {"hủy", "đã hủy"}:
+            cancelled_rentals.append(
+                {
+                    "size": rental.get("size"),
+                    "nhan_luc": rental.get("nhan_luc"),
+                    "tra_luc": rental.get("tra_luc"),
+                    "trang_thai": status,
+                }
+            )
             continue
 
         try:
@@ -151,6 +161,20 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
             time(9, 0),
         )
 
+        # Ghi nhận đơn sát ngay ranh giới (trả xong đúng lúc hoặc ngay trước giờ nhận) làm căn cứ giải thích.
+        if old_ready == start or ready == old_start:
+            related_rentals.append(
+                {
+                    "size": rental.get("size"),
+                    "nhan_luc": old_start.isoformat(timespec="minutes"),
+                    "tra_luc": old_return.isoformat(timespec="minutes"),
+                    "san_sang_lai": old_ready.isoformat(timespec="minutes"),
+                    "trang_thai": status,
+                    "quan_he": "tiep_giap_khong_trung",
+                }
+            )
+            continue
+
         # Hai khoảng tiếp giáp đúng thời điểm không bị coi là trùng.
         if not (start < old_ready and old_start < ready):
             continue
@@ -174,6 +198,16 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
             }
 
         intervals[size].append((old_start, old_ready))
+        related_rentals.append(
+            {
+                "size": size,
+                "nhan_luc": old_start.isoformat(timespec="minutes"),
+                "tra_luc": old_return.isoformat(timespec="minutes"),
+                "san_sang_lai": old_ready.isoformat(timespec="minutes"),
+                "trang_thai": status,
+                "quan_he": "trung_khoang_giu_hoac_giat",
+            }
+        )
 
     results = {}
 
@@ -216,9 +250,11 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
         "tra_luc": returned.isoformat(timespec="minutes"),
         "san_sang_lai": ready.isoformat(timespec="minutes"),
         "sizes": results,
+        "don_lien_quan": related_rentals,
+        "so_don_huy_cung_ma": len(cancelled_rentals),
         "luu_y": (
-            "Dữ liệu lịch riêng; chủ cửa hàng kiểm tra trước khi xác nhận."
-            if os.environ.get("RENTAL_DATA_SOURCE", "mock").strip().lower() == "private"
+            "Dữ liệu lịch cửa hàng (đã ẩn danh); chủ cửa hàng kiểm tra trước khi xác nhận."
+            if os.environ.get("RENTAL_DATA_SOURCE", "private").strip().lower() == "private"
             else "Dữ liệu giả lập; chủ cửa hàng kiểm tra trước khi xác nhận."
         ),
     }

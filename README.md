@@ -83,9 +83,9 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 
 | Thành phần | Thật / Giả | Ghi chú |
 |---|---|---|
-| Lời gọi AI ở quyết định trung tâm | **Giả ở CP2 · Thật từ CP3** | Hiện đang dùng `fake` để kiểm trace; nối model thật trước CP3 |
-| Công cụ tính lịch theo size & mốc 09:00–21:00 | **Thật** | Code Python trong `codebase/tools.py` (`check_availability`), đã có unit test |
-| Dữ liệu danh mục & lịch thuê | **Giả lập mặc định** | Mặc định đọc `data/mock_rental.json`; tùy chọn cục bộ `RENTAL_DATA_SOURCE=private` (không commit) |
+| Lời gọi AI ở quyết định trung tâm | **Thật** | Model: `gpt-4o-mini` (OpenAI API qua `codebase/ai.py`, đã xác nhận token > 0 bằng `eval --try`) |
+| Công cụ tính lịch theo size & mốc 09:00–21:00 | **Thật** | Code Python trong `codebase/tools.py` (`check_availability`), đã có 7/7 unit test |
+| Dữ liệu danh mục & lịch thuê | **Thật (đã ẩn danh)** | Mặc định đọc `data/rental.private.json` (đã loại bỏ tên/SĐT/giá, chủ cửa hàng đồng ý công khai); có tùy chọn `RENTAL_DATA_SOURCE=mock` |
 
 ## Dùng AI vào việc gì
 

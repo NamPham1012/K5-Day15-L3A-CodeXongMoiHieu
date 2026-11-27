@@ -15,19 +15,22 @@ Chủ cửa hàng nhận yêu cầu khách → tìm mẫu và size trong danh m�
 
 ## §2. Impact & quyết định chọn
 
-Nhóm cần so sánh ít nhất ba hướng, ghi lại hướng loại và nguồn hoặc giả định cho từng số.
+Nhóm so sánh ba hướng trên cùng người dùng chính (1 chủ cửa hàng cho thuê áo dài tại Hòa Lạc, có thể mở rộng sang các cửa hàng cho thuê trang phục nhỏ tương tự). Các thừa số chưa đo trực tiếp đều ghi rõ *(tự ước tính)* theo quy định.
 
 | Hướng | Số người | Lần/tháng | Thời gian mỗi lần | Impact/tháng | Làm kịp? | Chọn? |
 |---|---|---|---|---|---|---|
-| Kiểm tra lịch thuê áo dài | Chưa đo | Chưa đo | Chưa đo | Chưa tính | Cần đánh giá | Dự kiến |
-| Tư vấn mẫu/size | Chưa đo | Chưa đo | Chưa đo | Chưa tính | Cần đánh giá | Chưa chốt |
-| Nhắc trả đồ | Chưa đo | Chưa đo | Chưa đo | Chưa tính | Cần đánh giá | Chưa chốt |
+| Kiểm tra lịch thuê áo dài theo mã & size | 1 chủ quán (`P1.md`) | ~150 lần/tháng *(tự ước tính: ~5 lượt hỏi/ngày × 30 ngày)* | ~3 phút/lần *(tự ước tính: mở Sheet, lọc mã, kiểm size & ngày giặt)* | **~450 phút/tháng (~7,5 giờ/tháng)** + giảm rủi ro trùng lịch (P1: 3 đơn nhầm/tuần; data: 5 nhóm vượt tồn kho tháng 11) | Có (lát cắt hẹp, chỉ đọc) | **Chọn** |
+| Tư vấn mẫu / gợi ý size theo dáng người | 1 chủ quán (`P1.md`) | ~120 lần/tháng *(tự ước tính)* | ~4 phút/lần *(tự ước tính)* | ~480 phút/tháng *(tự ước tính)* | Khó kiểm chứng "đúng/sai" khách quan trong 2 ngày | **Loại** (phụ thuộc gu thẩm mỹ, thiếu dữ liệu ảnh/số đo chuẩn) |
+| Nhắc trả đồ tự động cho khách | 1 chủ quán (`P1.md`) | ~90 đơn/tháng *(tự ước tính từ ~261 đơn/2 tháng ≈ 130 đơn/tháng, phần lớn khách tự trả đúng hẹn)* | ~2 phút/lần *(tự ước tính)* | ~180 phút/tháng *(tự ước tính)* | Rủi ro an toàn (tác động ra ngoài: nhắn tin khách) | **Loại** (tác động ra ngoài, đau ít hơn trùng lịch) |
 
-Impact/tháng = số người × số lần/tháng × thời gian/lần. Ghi nguồn từng thừa số hoặc ghi rõ tự ước tính.
+- **Lý do chọn hướng 1:** Có bằng chứng kép rõ nhất (chủ quán `P1.md` bị nhầm 3 đơn/tuần + đào data cho thấy `99/261 = 37.9%` dòng lịch có bất thường và `5` nhóm vượt tồn kho ngay trong tháng 11/2026), đầu ra đo được đúng/sai rõ ràng và an toàn vì chỉ đọc dữ liệu.
 
 ## §3. Giải pháp tương tự
 
-Nhóm cần khảo sát một giải pháp gần giống, ghi điều đáng học, điều cần tránh và điểm khác biệt.
+| Giải pháp tương tự | Đáng học | Cần tránh | Điểm khác biệt của MiênAI |
+|---|---|---|---|
+| **Google Sheets + lọc/công thức tay** *(cách cửa hàng đang dùng)* | Linh hoạt, miễn phí, chủ quán đã quen nhập liệu và nhìn toàn bộ lịch sử đơn. | Dễ gõ nhầm ngày/size (`37.9%` dòng bất thường), công thức Sheet bị sai theo khi gõ nhầm tháng (vd dòng 89 `AD09`), dễ bỏ sót ranh giới giặt `09:00` khi dò bằng mắt. | Giữ nguyên sổ dữ liệu hiện có nhưng dùng code Python kiểm tra chính xác theo từng size + khoảng giặt `09:00` và chủ động gắn cờ `cần xác minh` khi gặp dữ liệu bẩn. |
+| **Phần mềm quản lý cho thuê / POS (vd KiotViet, Sapo, phần mềm quản lý thuê trang phục)** | Quản lý tồn kho chặt theo SKU/size, có báo cáo doanh thu và cảnh báo trùng lịch tự động. | Chi phí định kỳ, yêu cầu chuẩn hóa lại toàn bộ quy trình nhập liệu và đào tạo nhân viên; quá cồng kềnh với cửa hàng nhỏ 1 chủ quán tự quản lý qua Sheet & chat. | Hỏi đáp trực tiếp bằng tiếng Việt tự nhiên ngay trên lịch hiện có, không ép đổi phần mềm quản lý, không tự chốt đơn/thu tiền nên không gây rủi ro vận hành. |
 
 ## §4. Thiết kế
 
@@ -68,7 +71,7 @@ flowchart LR
 
 **Giới hạn:** thời gian sẵn sàng của đơn `Đang giặt` là dự kiến theo quy tắc chủ quán xác nhận, không chứng minh tình trạng thực tế; thiếu dữ liệu hoặc trả sau 21:00 vẫn cần xác minh.
 
-**Nguồn cục bộ bổ sung:** `data/rental.private.json` là bản trích cục bộ từ Sheet, được Git bỏ qua; chọn bằng `RENTAL_DATA_SOURCE=private`, mặc định vẫn là mock. Bản trích có 85 mã danh mục và 264 dòng lịch áo dài, không lưu tên khách. Đơn AD02 size L ngày 22/11 chỉ ghi ngày được áp dụng giờ giả định 09:00–21:00 theo xác nhận của Nam. Dữ liệu này là dữ liệu thật, không phải synthetic; xem giới hạn và xác minh tại `data/DATA_CARD.md`. Cần đối chiếu benchmark và xác minh quyền sử dụng trước khi đánh giá; không đưa dữ liệu cá nhân, file riêng hay trace nhạy cảm lên repo.
+**Nguồn dữ liệu lịch đã ẩn danh:** `data/rental.private.json` là bản trích từ Sheet đã loại bỏ hoàn toàn tên khách, SĐT, tiền cọc và giá (chỉ giữ 5 trường `ma_ao`, `size`, `nhan_luc`, `tra_luc`, `trang_thai`), gồm 85 mã danh mục và 263 dòng lịch áo dài. Chủ cửa hàng đã đồng ý công khai bản trích đã ẩn danh này trong repo để cả nhóm và người chấm có thể tái lập kết quả; đây là nguồn mặc định của bản chạy thử (có thể chuyển sang giả lập bằng `RENTAL_DATA_SOURCE=mock`). Xem chi tiết tại `data/DATA_CARD.md`.
 
 **Phạm vi lịch thực:** theo thông tin chủ cửa hàng, dữ liệu đáng tin bắt đầu từ 01/11/2026; truy vấn chế độ dữ liệu riêng có ngày nhận trước mốc này sẽ báo cần xác minh. Đơn cuối tháng 10 có thể ảnh hưởng đến 01/11 do giặt qua đêm vẫn phải được xét. Sáu dòng thiếu mã đã được Nam phân loại: ba dòng phụ kiện và ba dòng tiếp nối đơn AD50 có ô gộp. Dòng áo dài thiếu size hoặc ngày vẫn cần xác minh.
 
@@ -99,7 +102,7 @@ Cần ít nhất ba persona, mô phỏng ≥50 phiên thực qua bản chạy th
 
 ## §9. Rủi ro & an toàn
 
-Không commit tên, số điện thoại, đơn hàng thật, nguyên Sheet hoặc API key. Bản chạy thử mặc định dùng dữ liệu giả lập; nguồn lịch thật trích cục bộ là tùy chọn riêng theo xác nhận đội trưởng và cần xác minh phạm vi BTC cho phép. Kết quả có dữ liệu thiếu phải báo chưa xác minh. AI không chốt đơn, tự gửi tin hay sửa dữ liệu.
+Không commit tên, số điện thoại, thông tin tài chính, nguyên Sheet/Excel gốc hoặc API key. Bản trích lịch đã ẩn danh (`data/rental.private.json`, không chứa PII) được đưa vào repo theo sự đồng ý của chủ cửa hàng để phục vụ kiểm thử và tái lập kết quả. Kết quả có dữ liệu thiếu phải báo chưa xác minh. AI không chốt đơn, tự gửi tin hay sửa dữ liệu.
 
 ## §10. Phân công & changelog
 

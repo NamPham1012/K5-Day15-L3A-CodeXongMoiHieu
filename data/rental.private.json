@@ -1,0 +1,2410 @@
+{
+  "inventory": [
+    {
+      "ma_ao": "AD01",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD02",
+      "sizes": {
+        "S": 1,
+        "L": 1,
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD02V",
+      "sizes": {
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD03V",
+      "sizes": {
+        "S": 1,
+        "XXL": 1,
+        "XXXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD04",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD05",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD06",
+      "sizes": {
+        "M": 1,
+        "XL": 1,
+        "XXL": 1,
+        "XXXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD03H",
+      "sizes": {
+        "M": 1,
+        "XXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD07X",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD07T",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD07H",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD08",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD09",
+      "sizes": {
+        "S": 1,
+        "M": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD10",
+      "sizes": {
+        "M": 1,
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD11",
+      "sizes": {
+        "M": 2
+      }
+    },
+    {
+      "ma_ao": "AD12",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD13",
+      "sizes": {
+        "S": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD14",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD15",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD16",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD17",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD18B",
+      "sizes": {
+        "M": 1,
+        "XXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD18H",
+      "sizes": {
+        "S": 1,
+        "L": 1,
+        "XXXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD19",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD20X",
+      "sizes": {
+        "XL": 1,
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD20H",
+      "sizes": {
+        "L": 1,
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD21XC",
+      "sizes": {
+        "M": 2,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD21T",
+      "sizes": {
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD21H",
+      "sizes": {
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD22T",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD22H",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD23",
+      "sizes": {
+        "M": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD24H",
+      "sizes": {
+        "S": 1,
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD24X",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD25",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD26",
+      "sizes": {
+        "M": 1,
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD27",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD28",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD29",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD30",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD31",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD32",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD33",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD34",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD35",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD36",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD37",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD38H",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD38X",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD39",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD40",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD41",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD42",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD43",
+      "sizes": {
+        "L": 1,
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD44",
+      "sizes": {
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD45H",
+      "sizes": {
+        "M": 1,
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD45B",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD45X",
+      "sizes": {
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD47M",
+      "sizes": {
+        "M": 1,
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD48",
+      "sizes": {
+        "M": 1,
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD49B",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD49H",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD50",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 1,
+        "XL": 1,
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD51H",
+      "sizes": {
+        "S": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD51X",
+      "sizes": {
+        "XL": 1
+      }
+    },
+    {
+      "ma_ao": "AD53",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD54",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD55",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD56B",
+      "sizes": {
+        "M": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD56XĐ",
+      "sizes": {
+        "XXL": 1,
+        "XXXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD57",
+      "sizes": {
+        "L": 1,
+        "XL": 1,
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD58",
+      "sizes": {
+        "XXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD59H",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 5,
+        "XL": 1,
+        "XXL": 2
+      }
+    },
+    {
+      "ma_ao": "AD59X",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 2,
+        "XL": 2
+      }
+    },
+    {
+      "ma_ao": "AD59D",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 2,
+        "XL": 2
+      }
+    },
+    {
+      "ma_ao": "AD59XC",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 2,
+        "XL": 2
+      }
+    },
+    {
+      "ma_ao": "AD59XD",
+      "sizes": {
+        "S": 2,
+        "M": 2,
+        "L": 2,
+        "XL": 2
+      }
+    },
+    {
+      "ma_ao": "AD60",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD61",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD62",
+      "sizes": {
+        "S": 1,
+        "L": 1
+      }
+    },
+    {
+      "ma_ao": "AD63",
+      "sizes": {
+        "XXXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD65",
+      "sizes": {
+        "S": 1
+      }
+    },
+    {
+      "ma_ao": "AD66",
+      "sizes": {
+        "M": 1
+      }
+    },
+    {
+      "ma_ao": "AD67",
+      "sizes": {
+        "XXL": 1
+      }
+    },
+    {
+      "ma_ao": "AD68",
+      "sizes": {
+        "XL": 1,
+        "XXXL": 1
+      }
+    }
+  ],
+  "rentals": [
+    {
+      "ma_ao": "AD15",
+      "size": "L",
+      "nhan_luc": "2026-10-19T19:00:00",
+      "tra_luc": "2026-10-21T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD15",
+      "size": "L",
+      "nhan_luc": "2026-10-23T10:00:00",
+      "tra_luc": "2026-10-27T11:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "L",
+      "nhan_luc": "2026-10-16T16:00:00",
+      "tra_luc": "2026-10-19T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD16",
+      "size": "L",
+      "nhan_luc": "2026-10-17T17:00:00",
+      "tra_luc": "2026-10-18T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "L",
+      "nhan_luc": "2026-10-16T00:00:00",
+      "tra_luc": "2026-10-16T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "L",
+      "nhan_luc": "2026-10-16T18:30:00",
+      "tra_luc": "2026-10-18T19:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD31",
+      "size": "L",
+      "nhan_luc": "2026-10-16T18:00:00",
+      "tra_luc": "2026-10-19T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD25",
+      "size": "L",
+      "nhan_luc": "2026-10-16T18:00:00",
+      "tra_luc": "2026-10-19T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "L",
+      "nhan_luc": "2026-10-16T18:00:00",
+      "tra_luc": "2026-10-19T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD37",
+      "size": "L",
+      "nhan_luc": "2026-10-16T18:00:00",
+      "tra_luc": "2026-10-19T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "2026-10-17T12:00:00",
+      "tra_luc": "2026-10-18T15:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD14",
+      "size": "L",
+      "nhan_luc": "2026-10-17T12:00:00",
+      "tra_luc": "2026-10-18T15:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "L",
+      "nhan_luc": "2026-10-19T09:00:00",
+      "tra_luc": "2026-10-20T09:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "L",
+      "nhan_luc": "2026-10-18T10:00:00",
+      "tra_luc": "2026-10-18T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03H",
+      "size": "L",
+      "nhan_luc": "2026-10-18T10:00:00",
+      "tra_luc": "2026-10-18T21:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD17",
+      "size": "L",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-25T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD29",
+      "size": "L",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-25T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD27",
+      "size": "L",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-25T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-10-18T16:00:00",
+      "tra_luc": "2026-10-21T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD10",
+      "size": "L",
+      "nhan_luc": "2026-10-18T16:30:00",
+      "tra_luc": "2026-10-19T17:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD44H",
+      "size": "XL",
+      "nhan_luc": "2026-10-23T18:00:00",
+      "tra_luc": "2026-10-25T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD44H",
+      "size": "L",
+      "nhan_luc": "2026-10-19T08:30:00",
+      "tra_luc": "2026-10-21T09:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD38H",
+      "size": "L",
+      "nhan_luc": "2026-10-19T14:30:00",
+      "tra_luc": "2026-10-19T19:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "M",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-26T09:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "L",
+      "nhan_luc": "2026-10-20T06:30:00",
+      "tra_luc": "2026-10-21T07:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45B",
+      "size": "L",
+      "nhan_luc": "2026-10-20T18:00:00",
+      "tra_luc": "2026-10-21T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD49B",
+      "size": "L",
+      "nhan_luc": "2026-10-20T18:00:00",
+      "tra_luc": "2026-10-21T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD38X",
+      "size": "S",
+      "nhan_luc": "2026-10-24T16:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD38H",
+      "size": "M",
+      "nhan_luc": "2026-10-24T16:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "M",
+      "nhan_luc": "2026-10-24T20:00:00",
+      "tra_luc": "2026-10-25T22:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "M",
+      "nhan_luc": "2026-10-20T21:20:00",
+      "tra_luc": "2026-10-21T22:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "L",
+      "nhan_luc": "2026-10-21T17:15:00",
+      "tra_luc": "2026-10-22T18:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "S",
+      "nhan_luc": "2026-10-24T15:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "M",
+      "nhan_luc": "2026-10-24T15:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "L",
+      "nhan_luc": "2026-10-24T15:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD10",
+      "size": "M",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-25T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-10-22T21:00:00",
+      "tra_luc": "2026-10-24T09:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "S",
+      "nhan_luc": "2026-11-07T18:00:00",
+      "tra_luc": "2026-11-08T19:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD22T",
+      "size": "S",
+      "nhan_luc": "2026-10-29T20:00:00",
+      "tra_luc": "2026-10-30T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "XL",
+      "nhan_luc": "2026-10-24T19:00:00",
+      "tra_luc": "2026-10-25T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45B",
+      "size": "M",
+      "nhan_luc": "2026-10-23T13:00:00",
+      "tra_luc": "2026-10-25T16:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD37",
+      "size": "S",
+      "nhan_luc": "2026-10-23T19:00:00",
+      "tra_luc": "2026-10-25T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD43XXL",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-10-23T16:00:00",
+      "tra_luc": "2026-10-23T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "S",
+      "nhan_luc": "2026-10-24T16:00:00",
+      "tra_luc": "2026-10-25T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24",
+      "size": "S",
+      "nhan_luc": "2026-11-13T16:00:00",
+      "tra_luc": "2026-11-17T17:00:00",
+      "trang_thai": "HỦY"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "S",
+      "nhan_luc": "2026-10-23T19:00:00",
+      "tra_luc": "2026-10-25T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "M",
+      "nhan_luc": "2026-10-23T19:00:00",
+      "tra_luc": "2026-10-25T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD20X",
+      "size": "XL",
+      "nhan_luc": "2026-10-24T10:30:00",
+      "tra_luc": "2026-10-25T12:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD28",
+      "size": "M",
+      "nhan_luc": "2026-10-24T11:30:00",
+      "tra_luc": "2026-10-25T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "S",
+      "nhan_luc": "2026-10-24T12:30:00",
+      "tra_luc": "2026-10-25T16:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD42",
+      "size": "M",
+      "nhan_luc": "2026-10-24T14:00:00",
+      "tra_luc": "2026-10-25T16:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02V",
+      "size": "XL",
+      "nhan_luc": "2026-10-27T19:00:00",
+      "tra_luc": "2026-10-29T12:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-10-27T20:30:00",
+      "tra_luc": "2026-10-28T21:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD22T",
+      "size": "S",
+      "nhan_luc": "2026-10-28T11:30:00",
+      "tra_luc": "2026-10-28T21:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "2026-10-24T17:00:00",
+      "tra_luc": "2026-10-25T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD35",
+      "size": "L",
+      "nhan_luc": "2026-10-24T18:00:00",
+      "tra_luc": "2026-10-25T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD14",
+      "size": "M",
+      "nhan_luc": "2026-10-24T20:00:00",
+      "tra_luc": "2026-10-27T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "XL",
+      "nhan_luc": "2026-10-24T21:00:00",
+      "tra_luc": "2026-10-25T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD25",
+      "size": "M",
+      "nhan_luc": "2026-10-26T20:00:00",
+      "tra_luc": "2026-10-27T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "L",
+      "nhan_luc": "2026-10-24T22:00:00",
+      "tra_luc": "2026-10-25T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "M",
+      "nhan_luc": "2026-10-24T22:00:00",
+      "tra_luc": "2026-10-25T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD07T",
+      "size": "S",
+      "nhan_luc": "2026-10-24T22:00:00",
+      "tra_luc": "2026-10-25T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-10-24T22:00:00",
+      "tra_luc": "2026-10-25T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD15",
+      "size": "M",
+      "nhan_luc": "2026-10-28T00:00:00",
+      "tra_luc": "2026-10-29T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD40",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "2026-10-29T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-10-28T13:00:00",
+      "tra_luc": "2026-10-29T14:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "2026-10-28T10:00:00",
+      "tra_luc": "2026-10-29T11:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "L",
+      "nhan_luc": "2026-10-27T18:00:00",
+      "tra_luc": "2026-10-28T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "M",
+      "nhan_luc": "2026-10-30T17:00:00",
+      "tra_luc": "2026-11-01T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD10",
+      "size": "XL",
+      "nhan_luc": "2026-10-27T19:00:00",
+      "tra_luc": "2026-10-29T12:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "S",
+      "nhan_luc": "2026-10-27T19:30:00",
+      "tra_luc": "2026-10-28T20:30:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "2026-10-27T20:15:00",
+      "tra_luc": "2026-10-29T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "XL",
+      "nhan_luc": "2026-10-27T20:00:00",
+      "tra_luc": "2026-10-28T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD56B",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T10:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD56XĐ",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T10:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD05",
+      "size": "S",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T10:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "L",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T10:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD51X",
+      "size": "XL",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T10:00:00",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "M",
+      "nhan_luc": "2026-10-28T09:00:00",
+      "tra_luc": "2026-10-29T10:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-10-28T11:00:00",
+      "tra_luc": "2026-10-29T13:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD35",
+      "size": "L",
+      "nhan_luc": "2026-10-28T13:00:00",
+      "tra_luc": "2026-10-29T16:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "M",
+      "nhan_luc": "2026-10-29T21:00:00",
+      "tra_luc": "2026-10-30T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD60",
+      "size": "S",
+      "nhan_luc": "2026-10-29T21:00:00",
+      "tra_luc": "2026-10-30T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "L",
+      "nhan_luc": "2026-11-06T00:00:00",
+      "tra_luc": "2026-11-07T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "L",
+      "nhan_luc": "2026-11-01T00:00:00",
+      "tra_luc": "2026-11-02T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "S",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-01T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "S",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-01T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45B",
+      "size": "M",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-01T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD54",
+      "size": "M",
+      "nhan_luc": "2026-10-31T00:00:00",
+      "tra_luc": "2026-11-02T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "L",
+      "nhan_luc": "2026-11-02T15:00:00",
+      "tra_luc": "2026-11-03T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51X",
+      "size": "XL",
+      "nhan_luc": "2026-11-02T15:00:00",
+      "tra_luc": "2026-11-03T18:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD15",
+      "size": "M",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T20:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD34",
+      "size": "M",
+      "nhan_luc": "2026-11-27T19:00:00",
+      "tra_luc": "2026-11-28T20:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-13T15:00:00",
+      "tra_luc": "2026-11-15T15:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "L",
+      "nhan_luc": "2026-11-13T15:00:00",
+      "tra_luc": "2026-11-15T15:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD30",
+      "size": "M",
+      "nhan_luc": "2026-11-05T00:00:00",
+      "tra_luc": "2026-11-06T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD22T",
+      "size": "S",
+      "nhan_luc": "2026-11-09T00:00:00",
+      "tra_luc": "2026-11-11T00:00:00",
+      "trang_thai": "HỦY"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "L",
+      "nhan_luc": "2026-11-04T00:00:00",
+      "tra_luc": "2026-11-05T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "2026-11-05T00:00:00",
+      "tra_luc": "2026-11-06T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "S",
+      "nhan_luc": "2026-11-05T00:00:00",
+      "tra_luc": "2026-11-06T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD29",
+      "size": "L",
+      "nhan_luc": "2026-11-05T00:00:00",
+      "tra_luc": "2026-11-06T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "S",
+      "nhan_luc": "2026-11-04T00:00:00",
+      "tra_luc": "2026-11-05T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD38H",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD56B",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59Đ",
+      "size": "L",
+      "nhan_luc": "2026-11-11T16:00:00",
+      "tra_luc": "2026-11-12T17:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD54",
+      "size": "M",
+      "nhan_luc": "2026-11-05T19:00:00",
+      "tra_luc": "2026-11-06T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD05",
+      "size": "S",
+      "nhan_luc": "2026-11-06T18:00:00",
+      "tra_luc": "2026-11-07T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD60",
+      "size": "M",
+      "nhan_luc": "2026-11-05T20:00:00",
+      "tra_luc": "2026-11-07T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45B",
+      "size": "M",
+      "nhan_luc": "2026-11-05T20:00:00",
+      "tra_luc": "2026-11-07T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD62",
+      "size": "L",
+      "nhan_luc": "2026-11-06T11:00:00",
+      "tra_luc": "2026-11-08T12:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "2026-11-06T14:00:00",
+      "tra_luc": "2026-11-07T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD10",
+      "size": "M",
+      "nhan_luc": "2026-11-06T17:00:00",
+      "tra_luc": "2026-11-07T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "S",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-06T21:00:00",
+      "tra_luc": "2026-11-08T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD58",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-06T21:00:00",
+      "tra_luc": "2026-11-08T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD01",
+      "size": "S",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-24T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD61",
+      "size": "S",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD65",
+      "size": "S",
+      "nhan_luc": "2026-11-08T12:00:00",
+      "tra_luc": "2026-11-08T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "L",
+      "nhan_luc": "2026-11-08T12:00:00",
+      "tra_luc": "2026-11-08T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "S",
+      "nhan_luc": "2026-11-08T12:00:00",
+      "tra_luc": "2026-11-08T20:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD10",
+      "size": "M",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "S",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD62",
+      "size": "S",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD24X",
+      "size": "M",
+      "nhan_luc": "2026-11-15T09:30:00",
+      "tra_luc": "2026-11-16T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59H",
+      "size": "S",
+      "nhan_luc": "2026-11-16T15:00:00",
+      "tra_luc": "2026-11-18T17:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD14",
+      "size": "M",
+      "nhan_luc": "2026-11-17T00:00:00",
+      "tra_luc": "2026-11-18T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD58",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-08T18:00:00",
+      "tra_luc": "2026-11-09T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD17",
+      "size": "L",
+      "nhan_luc": "2026-11-08T18:00:00",
+      "tra_luc": "2026-11-09T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "M",
+      "nhan_luc": "2026-11-08T18:00:00",
+      "tra_luc": "2026-11-09T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03H",
+      "size": "M",
+      "nhan_luc": "2026-11-08T18:00:00",
+      "tra_luc": "2026-11-09T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD37",
+      "size": "S",
+      "nhan_luc": "2026-11-08T18:00:00",
+      "tra_luc": "2026-11-09T19:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "M",
+      "nhan_luc": "2026-11-12T00:00:00",
+      "tra_luc": "2026-11-14T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD63",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-12T16:00:00",
+      "tra_luc": "2026-11-13T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "S",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45B",
+      "size": "M",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-30T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "XL",
+      "nhan_luc": "2026-11-12T00:00:00",
+      "tra_luc": "2026-11-13T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "S",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD59X",
+      "size": "S",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "S",
+      "nhan_luc": "2026-11-12T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-12T00:00:00",
+      "tra_luc": "2026-11-14T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "M",
+      "nhan_luc": "2026-11-13T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD27",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD20H",
+      "size": "L",
+      "nhan_luc": "2026-11-13T00:00:00",
+      "tra_luc": "2026-11-14T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD20X",
+      "size": "M",
+      "nhan_luc": "2026-11-21T00:00:00",
+      "tra_luc": "2026-11-22T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51X",
+      "size": "XL",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD22T",
+      "size": "S",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD22H",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD60",
+      "size": "M",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD37",
+      "size": "S",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD34",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD35",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51X",
+      "size": "XL",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD54",
+      "size": "M",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "S",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "M",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59Đ",
+      "size": "L",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD41",
+      "size": "S",
+      "nhan_luc": "2026-11-14T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59H",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-15T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD45H",
+      "size": "M",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59H",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "L",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD29",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD29",
+      "size": "L",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD66",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "XL",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD20X",
+      "size": "XL",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59X",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "S",
+      "nhan_luc": "2026-11-16T00:00:00",
+      "tra_luc": "2026-11-17T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD20H",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD21XC",
+      "size": "L",
+      "nhan_luc": "2026-11-17T00:00:00",
+      "tra_luc": "2026-11-18T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD43",
+      "size": "XL",
+      "nhan_luc": "2026-11-17T00:00:00",
+      "tra_luc": "2026-11-18T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-27T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "S",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "L",
+      "nhan_luc": "2026-11-17T00:00:00",
+      "tra_luc": "2026-11-18T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-21T00:00:00",
+      "tra_luc": "2026-11-22T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-17T00:00:00",
+      "tra_luc": "2026-11-18T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD25",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-18T00:00:00",
+      "tra_luc": "2026-11-19T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD24X",
+      "size": "M",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD24H",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD59X",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "S",
+      "nhan_luc": "2026-11-18T00:00:00",
+      "tra_luc": "2026-11-19T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD42",
+      "size": "M",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "L",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD16",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59H",
+      "size": "M",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "M",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "XL",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD51H",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD67",
+      "size": "L",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18B",
+      "size": "M",
+      "nhan_luc": "2026-11-21T00:00:00",
+      "tra_luc": "2026-11-22T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD59H",
+      "size": "XXL",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD07T",
+      "size": "S",
+      "nhan_luc": "2026-11-19T00:00:00",
+      "tra_luc": "2026-11-20T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "S",
+      "nhan_luc": "2026-11-22T00:00:00",
+      "tra_luc": "2026-11-23T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD03V",
+      "size": "S",
+      "nhan_luc": "2026-11-21T00:00:00",
+      "tra_luc": "2026-11-23T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD42",
+      "size": "M",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-24T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-11-22T09:00:00",
+      "tra_luc": "2026-11-22T21:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD13",
+      "size": "S",
+      "nhan_luc": "2026-11-22T00:00:00",
+      "tra_luc": "2026-11-23T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD02V",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD40",
+      "size": "L",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD03H",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-22T00:00:00",
+      "tra_luc": "2026-11-23T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD62",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-24T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD05",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-12-07T00:00:00",
+      "tra_luc": "2026-12-08T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD29",
+      "size": "L",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD23",
+      "size": "L",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-25T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD09",
+      "size": "S",
+      "nhan_luc": "2026-11-24T00:00:00",
+      "tra_luc": "2026-11-25T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD51X",
+      "size": "XL",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-24T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD04",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-23T00:00:00",
+      "tra_luc": "2026-11-24T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD54",
+      "size": "M",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": ""
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "XL",
+      "nhan_luc": "2026-11-24T00:00:00",
+      "tra_luc": "2026-11-25T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "KHONG_RO",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD21XC",
+      "size": "M",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD18H",
+      "size": "S",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "M",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD63",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-25T00:00:00",
+      "tra_luc": "2026-11-26T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD36",
+      "size": "M",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-30T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD20X",
+      "size": "XL",
+      "nhan_luc": "2026-12-02T00:00:00",
+      "tra_luc": "2026-12-03T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD05",
+      "size": "S",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD26",
+      "size": "M",
+      "nhan_luc": "2026-11-25T00:00:00",
+      "tra_luc": "2026-11-26T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD68",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD67",
+      "size": "XXL",
+      "nhan_luc": "",
+      "tra_luc": "",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD16",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD39",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD57",
+      "size": "L",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD42",
+      "size": "M",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-26T00:00:00",
+      "trang_thai": "Đang giặt"
+    },
+    {
+      "ma_ao": "AD65",
+      "size": "M",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD06",
+      "size": "XL",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-30T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD24X",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD02",
+      "size": "L",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-26T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Đang thuê"
+    },
+    {
+      "ma_ao": "AD60",
+      "size": "KHONG_RO",
+      "nhan_luc": "2026-11-27T00:00:00",
+      "tra_luc": "2026-11-28T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD03H",
+      "size": "M",
+      "nhan_luc": "2026-11-28T00:00:00",
+      "tra_luc": "2026-11-29T00:00:00",
+      "trang_thai": "Khách đặt trước"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "M",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "M",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    },
+    {
+      "ma_ao": "AD50",
+      "size": "XL",
+      "nhan_luc": "2026-11-15T00:00:00",
+      "tra_luc": "2026-11-16T00:00:00",
+      "trang_thai": "Đã hoàn tất"
+    }
+  ],
+  "unassigned_rentals": []
+}

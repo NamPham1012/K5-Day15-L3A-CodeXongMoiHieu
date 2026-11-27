@@ -35,5 +35,6 @@ evidence/**/raw-*
 # Nguyên file data BTC cấp (data/preclass, data/training-ops… của repo đề): để ở đây, không commit
 data-btc
 data-btc/
-# Dữ liệu lịch thực tế đã loại tên vẫn là dữ liệu riêng của cửa hàng
-data/rental.private*.json
+# File Excel/Sheet gốc chứa tên khách & SĐT: không bao giờ commit
+*.xlsx
+*.xls
