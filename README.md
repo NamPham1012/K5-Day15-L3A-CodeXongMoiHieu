@@ -1,4 +1,6 @@
-# CodeXongMoiHieu — Grounded Pre-class Tutor
+# CodeXongMoiHieu — Trợ lý kiểm tra lịch thuê áo dài
+
+**Track F ·  CP1.** Trợ lý hỗ trợ chủ cửa hàng kiểm tra áo dài còn hay trùng lịch theo từng size. Chủ cửa hàng đưa ra quyết định xác nhận đơn. Bằng chứng, dữ liệu thử và sản phẩm đang chuẩn bị.
 
 **Thành viên, lớp, track:** xem [TEAMS.md](TEAMS.md). **Điền TEAMS.md đúng format**: khi chấm và đánh giá, BTC quét file này để ghép điểm cho từng người.
 
@@ -16,7 +18,7 @@
 | Chấm cột `pass` theo metric spec | Chạy cả bộ một lệnh, có run ID, model, token từng câu (`run.py eval`) · tính % đạt (`run.py score`) |
 | Persona, số người dùng thật, giá model (`cost/personas.yaml`) | Sinh ~50 phiên, chạy thật qua bản chạy thử, tính chi phí / phiên, / task thành công, / tháng 3 kịch bản (`run.py simulate`) |
 
-*Ví dụ track A (ví dụ cỡ, không phải lời giải):* nhóm viết công cụ `search_lesson` tra bài pre-class đã đánh mã đoạn, luồng "tra đoạn → model trả lời kèm mã đoạn, không có thì nói không có", metric "mọi khẳng định có mã đoạn đúng", persona "ôn dồn trước kiểm tra". Khung chạy 25 câu thử ra `run-1.csv`, nhóm chấm `pass`, `score` in % đạt; `simulate` chạy 50 phiên ra chi phí / task thành công cho hai model.
+Thiết kế và công cụ tra lịch của nhóm đang là bản nháp trong [spec.md](spec.md); code hiện tại vẫn là ví dụ starter, chưa phải sản phẩm kiểm tra lịch thuê.
 
 ## Chạy trong 3 phút
 
