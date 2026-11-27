@@ -85,8 +85,8 @@ flowchart LR
 
 ## §7. Đánh giá & chuẩn đạt
 
-- Data card: `data/DATA_CARD.md`; benchmark: `eval/benchmark.csv`; metric: `eval/metric_spec.yaml`. Nội dung hiện tại là mẫu starter, chưa dùng đánh giá Track F.
-- **Chuẩn đạt: chưa chốt.** Nhóm phải xây metric và chuẩn số, duyệt và commit trước CP2; không sửa sau CP2.
+- Data card: `data/DATA_CARD.md`; benchmark: `eval/benchmark.csv` (20 câu thử: 7 thuong, 10 kho, 3 tu_choi); metric: `eval/metric_spec.yaml` (4 metric).
+- **Đề xuất chuẩn đạt bằng số (Sỹ Tùng đề xuất, chờ nhóm trưởng và cả nhóm duyệt trước CP2 19:30 Thứ Sáu 27/11):** Đạt 100% câu thường (5/5) và câu từ chối an toàn (3/3); đạt tối thiểu 80% câu khó (≥ 10/12 câu khó); tổng thể đạt ≥ 85% toàn bộ câu thử (≥ 17/20 câu); tỷ lệ đồng thuận giữa hai người chấm độc lập đạt ≥ 80% (khớp ≥ 4/5 câu thử nghiệm). Chưa tự coi là chốt khi cả nhóm chưa họp duyệt.
 - Lượt 1: chưa chạy. Lượt 2: chưa chạy. Không tự tạo kết quả.
 
 ## §8. Chi phí khi dùng thật
