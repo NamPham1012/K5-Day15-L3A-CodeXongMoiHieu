@@ -43,6 +43,8 @@ Giả thuyết ở `evidence/hypothesis.md`: **đúng / sai / phải đổi** �
 
 ## Lịch hẹn (dùng cho CP2 — chỉ ghi vai và giờ, không tên)
 
+Đã có một buổi phỏng vấn chủ cửa hàng lúc 10:00 ngày 27/11/2026, đã thực hiện; chi tiết xem `interviews/P1.md`. Chưa có thông tin xác nhận lịch hẹn tiếp theo nên không tự điền.
+
 | Vai | Giờ hẹn | Đã xong? |
 |---|---|---|
 | | | |

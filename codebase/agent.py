@@ -74,7 +74,7 @@ def answer(text: str) -> dict:
 
     # Gọi model giả để kiểm tra luồng và trace của khung BTC.
     # Không dùng câu trả lời giả để quyết định số lượng.
-    call_model(SYSTEM, "Đã kiểm tra dữ liệu giả lập.")
+    call_model(SYSTEM, "Đã kiểm tra dữ liệu đầu vào.")
 
     lines = [
         f"Mã áo: {result['ma_ao']}",
@@ -97,8 +97,6 @@ def answer(text: str) -> dict:
         else:
             lines.append(f"- Size {size}: còn {item['con_lai']} áo.")
 
-    lines.append(
-        "Dữ liệu giả lập; chủ cửa hàng kiểm tra trước khi xác nhận."
-    )
+    lines.append(result["luu_y"])
 
     return {"output": "\n".join(lines)}

@@ -12,7 +12,7 @@
 | 5   | Lát cắt MỘT CÂU              | Chủ cửa hàng hỏi mã áo và khoảng ngày thuê; trợ lý diễn giải yêu cầu và dựa trên kết quả kiểm tra lịch để báo từng size còn, trùng hoặc cần xác minh, giúp chủ cửa hàng tư vấn khách.                                  |
 | 6   | AI tự làm đến đâu            | AI diễn giải câu hỏi và trình bày kết quả; code xác định lịch, thiếu dữ liệu thì báo cần kiểm tra; chủ cửa hàng tự quyết định, xác nhận và cập nhật đơn.                                                               |
 | 7   | Phân công có tên             | Nguyễn Bá Quảng: product, bằng chứng và spec · Vũ Thanh Toàn: tích hợp, giao diện, QA và demo · Sỹ Tùng: data, benchmark, đánh giá và chi phí · Phạm Văn Nam: đội trưởng, điều phối, checkpoint, AI engineering, model, truy xuất và an toàn. |
-| —   | *(CP2)* Đã đổi gì so với CP1 | Chưa xác nhận đã nộp CP1; điền khi cập nhật CP2.                                                                                                                                                                       |
+| — | *(CP2)* Đã đổi gì so với CP1 | Đã chốt quy tắc theo size và mốc 09:00–21:00; có công cụ tra lịch, 20 câu thử và 4 metric. Model thật và kết nối Sheet tự động chưa triển khai; benchmark cần đối chiếu nguồn. |
 
 
 # Track F · Trợ lý kiểm tra lịch thuê áo dài
@@ -31,9 +31,9 @@
 
 **Lát cắt:**Chủ cửa hàng hỏi mã áo và khoảng ngày thuê; trợ lý diễn giải yêu cầu, dùng kết quả kiểm tra lịch để báo từng size còn, trùng hoặc cần xác minh, giúp chủ cửa hàng tư vấn khách.
 
-**Công cụ của agent:**Dự kiến `get_inventory(ma_ao)` → size và số lượng; `get_rentals(ma_ao, khoảng_thời_gian)` → lịch giả lập; `check_availability(...)` → trạng thái từng size và căn cứ. Đều chỉ đọc, code tính xung đột. Chưa triển khai.
+**Công cụ của agent:** `get_mock_data()` đọc nguồn cục bộ đã chọn; `check_availability(...)` tính trạng thái từng size hoặc báo cần xác minh. Công cụ chỉ đọc; code tính xung đột.
 
-**Bộ câu thử:** Câu hỏi mã áo và ngày; kỳ vọng đối chiếu từng size với lịch giả lập, gồm lịch trùng, dữ liệu thiếu, đơn hủy và yêu cầu tiết lộ dữ liệu cá nhân. Nhóm phải tạo benchmark và metric, chưa có kết quả.
+**Bộ câu thử:** 20 câu và 4 metric có trong `eval/`; cần đối chiếu đáp án với nguồn được chọn. Chưa có kết quả chấm chính thức.
 
 **Persona chi phí:**Chủ cửa hàng hỏi ít / vừa / nhiều; số lần theo bằng chứng hoặc ghi rõ tự ước tính, hiện chưa có số.
 

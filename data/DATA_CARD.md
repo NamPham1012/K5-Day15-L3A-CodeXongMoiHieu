@@ -1,19 +1,24 @@
-# Data card — dữ liệu bản chạy thử dùng
+# Data card — nguồn dữ liệu và giới hạn
 
-> Điền ở guide bước 2.4 (bản đầu ở CP2, đủ ở CP3). Ôn lại: ngày 6 · lab ngày 6. Chấm ở rubric R4.
-> Một trang. Mỗi dataset một mục. Dữ liệu chạy thử để trong thư mục `data/` này.
-> Không commit nguyên tài liệu khoá, dữ liệu cá nhân thật hay nguyên file data BTC cấp — chỉ đoạn trích ngắn, bản viết lại, hoặc số đã tổng hợp.
-
-## Dataset 1 · Dữ liệu danh mục áo dài và lịch thuê giả lập (synthetic)
+## Dataset 1 · Mock cho bản chạy thử
 
 | Thuộc tính | Chi tiết |
 |---|---|
-| **Dùng để làm gì** | Cung cấp dữ liệu nền giả lập cho các công cụ của bản chạy thử (`get_inventory`, `get_rentals`, `check_availability`) để tra cứu tồn kho theo size, kiểm tra lịch trùng và thời gian sẵn sàng; cung cấp ngữ cảnh thực nghiệm để sinh bộ câu thử `eval/benchmark.csv`. |
-| **Từ đâu** | Nhóm tự dựng (`synthetic`) dựa trên cấu trúc mô hình hóa từ thực tế hoạt động của cửa hàng cho thuê áo dài tại Hòa Lạc (được trích xuất mẫu từ phỏng vấn và sổ sách ghi chép, đã loại bỏ toàn bộ dữ liệu cá nhân thật). |
-| **Xử lý & Cách tạo** | 1. **Cách tạo (Synthetic Pipeline)**: Khởi tạo danh mục áo dài mẫu và sinh các bản ghi lịch thuê mô phỏng các tình huống thực tế (trùng lịch, lệch size, giặt ủi, đơn hủy, đơn đặt trước).<br>2. **Chuẩn hóa trường dữ liệu**: Chuyển đổi định dạng ngày giờ thập phân sang ISO chuẩn giờ Việt Nam (UTC+7); quy chuẩn hóa cú pháp size/số lượng (`2XL` là 2 áo XL, `XXL` là 1 áo XXL).<br>3. **Loại bỏ PII**: Thay thế toàn bộ tên khách hàng, số điện thoại, số tiền đặt cọc bằng mã định danh ẩn danh hoặc nhãn giả lập (`KH_01`, `Khách đặt trước`), tuyệt đối không lưu thông tin cá nhân khách thật.<br>4. **Gán nhãn trạng thái nghiệp vụ**: `Đã hoàn tất` (xét thời gian giặt đến 09:00 hôm sau), `Đang thuê`, `Khách đặt trước`, `Đang giặt`, `HỦY`. |
-| **Số dòng / số bản ghi** | - **Danh mục áo dài**: 130 mã áo kèm phân loại size và số lượng tồn kho.<br>- **Bản ghi lịch thuê**: 281 bản ghi lịch thuê giả lập (gồm 196 bản ghi hoàn tất, 31 đặt trước, 15 đang thuê, 13 đang giặt, 2 đơn hủy, 24 đơn edge-case thiếu thông tin size để thử nghiệm). |
-| **Phiên bản / ngày lấy** | Phiên bản synthetic v1.0 — ngày 27/11/2026. |
-| **Nhãn** | `synthetic` (nhóm tự dựng và chuẩn hóa làm sạch). |
-| **Giới hạn** | - Dữ liệu tập trung vào tháng 10–11/2026 (mô phỏng mùa kỷ yếu học sinh, sinh viên).<br>- Có chủ đích đưa vào các bản ghi khuyết thiếu (như 24 dòng thiếu size trong đơn, đơn trả sau 21:00) nhằm phục vụ việc kiểm thử khả năng gắn cờ cảnh báo của AI. |
+| File | `data/mock_rental.json` trong repo |
+| Mục đích | `get_mock_data` và `check_availability` đọc để chạy bản mock và kiểm thử. |
+| Nguồn / nhãn | Nhóm tự dựng thủ công, `synthetic`. Không phải bằng chứng pain. |
+| Số lượng | 2 mẫu áo và 2 bản ghi lịch giả lập. |
+| Cách tạo | Dựng tay theo cấu trúc mã áo, size, số lượng, thời gian và trạng thái; không dùng sinh ngẫu nhiên nên không có seed. |
+| Giới hạn | Mẫu nhỏ, không đại diện lịch thực tế; không chứa các mã khác trong benchmark như AD26, AD09. Người kiểm và số dòng đã kiểm tay: nhóm bổ sung sau khi xác nhận. |
 
-**Data `synthetic` (nhóm tự dựng):** Dữ liệu được nhóm tổng hợp và làm sạch qua script chuẩn hóa; đã được kiểm duyệt thủ công 100% các trường để đảm bảo không chứa bất kỳ dữ liệu cá nhân thật nào của khách hàng. Data tự dựng phục vụ cho bản chạy thử và benchmark, không thay thế cho bằng chứng pain tại `evidence/`.
+## Nguồn tham chiếu cho benchmark
+
+Theo thông tin nhóm cung cấp, Tùng đã tham chiếu Sheet/Excel danh mục và lịch của cửa hàng khi xây dựng `eval/benchmark.csv`. Nhóm đã tạo bộ chuyển đổi `scripts/import_rental_excel.py` đọc hai file Excel do Nam cung cấp và lưu một bản trích cục bộ `data/rental.private.json`; file này không được commit. Bộ chuyển đổi dùng danh mục Excel mới và lịch từ `MIÊN.xlsx`, bỏ cột tên khách, tiền cọc, giá và ghi chú; dữ liệu lịch trích xuất vẫn là **dữ liệu thực**, không phải synthetic.
+
+Ngày 27/11/2026, bản trích riêng được cập nhật từ hai Google Sheet: 85 mã trong danh mục và 264 dòng lịch mã AD. Đã bỏ qua mã phụ kiện PK, ba dòng phụ kiện không mã theo xác nhận của Nam và các mã dự phòng trống. Ba dòng size M, M, XL thuộc nhóm ô gộp AD50 ở dòng 180–183 được bổ sung thông tin từ ô đầu nhóm theo ảnh Nam cung cấp; Nam xác nhận ngày 15–16/11. Có 34 dòng AD thiếu size hoặc nội dung size phức tạp được đánh dấu `KHONG_RO`; cần xác minh khi liên quan. Bản trích không tự đồng bộ khi Sheet thay đổi. Chưa đối chiếu toàn bộ đáp án benchmark với bản trích này.
+
+Dữ liệu lịch thật và tên khách là dữ liệu nhạy cảm; chỉ sử dụng theo phạm vi BTC/coach chấp thuận, không đưa tên hoặc bản gốc dữ liệu khách vào repo công khai hay prompt model. Việc xác nhận quyền và xử lý các dữ liệu đã xuất hiện trong benchmark cần được nhóm kiểm tra.
+
+**Phạm vi và dữ liệu thiếu:** chủ cửa hàng cho biết dữ liệu đáng tin từ 01/11/2026. Bộ kiểm tra nguồn riêng không kết luận cho truy vấn trước mốc đó và vẫn xét đơn cuối tháng 10 nếu thời gian giặt có thể kéo sang 01/11. Sáu dòng thiếu mã đã được Nam phân loại: ba dòng phụ kiện và ba dòng tiếp nối đơn AD50. Các dòng áo dài thiếu size hoặc ngày vẫn phải kiểm tra riêng.
+
+**Ghi chú:** Chế độ mặc định vẫn dùng mock giả lập; `RENTAL_DATA_SOURCE=private` chọn bản trích cục bộ khi đã được phép. Trước khi đánh giá, cần thống nhất tập dữ liệu, bảo đảm người chạy có quyền dùng và đối chiếu từng đáp án; không sửa kết quả đã chạy hoặc đánh tráo nguồn. Không ghi trace/đầu ra chứa dữ liệu riêng lên repo công khai.

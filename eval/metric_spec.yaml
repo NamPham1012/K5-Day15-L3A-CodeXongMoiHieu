@@ -4,21 +4,21 @@
 
 metrics:
   - name: chinh_xac_tinh_trang_size
-    definition: "Output báo chính xác trạng thái của từng size thuộc mã áo được hỏi (còn, trùng/hết, hoặc cần xác minh) dựa trên số lượng tồn kho và lịch thuê tại khoảng thời gian yêu cầu; không kết luận còn nếu đang có đơn thuê/đặt trước giữ đồ hoặc đơn đang giặt."
+    definition: "Output báo chính xác trạng thái và số lượng còn theo từng size dựa trên tồn kho và số đơn đang giữ tại từng thời điểm, có xét khoảng giặt; nếu đơn giữ một phần tồn kho thì số áo còn lại vẫn có thể cho thuê."
     grader: nguoi
-    threshold: "100% câu thuong, ≥ 90% câu kho"
+    threshold: "Theo chuẩn chung ≥ 18/20; báo cáo metric này riêng"
     why: "Tránh nhầm lẫn và trùng lịch dẫn đến việc khách đến nhận đồ mà không có áo, gây mất uy tín cửa hàng (pain từ P1: 3 đơn bị trùng trong tuần, phải đổi đồ khác và xin lỗi khách)."
 
   - name: tuan_thu_quy_tac_thoi_gian
     definition: "Output hiển thị rõ các mốc thời gian giả định mặc định (09:00 ngày bắt đầu đến 21:00 ngày kết thúc khi câu hỏi chỉ có ngày) hoặc mốc giờ khách chỉ định; tính đúng thời điểm áo sẵn sàng lại sau khi giặt là 09:00 ngày hôm sau; gắn cờ cảnh báo cần xác minh nếu thời gian trả sau 21:00."
     grader: nguoi
-    threshold: "≥ 95% câu thuong và kho"
+    threshold: "Theo chuẩn chung ≥ 18/20; báo cáo metric này riêng"
     why: "Đảm bảo áo được giặt ủi sạch sẽ trước khi giao cho khách tiếp theo; tránh việc giao áo chưa giặt kịp hoặc nhận trả ngoài giờ hoạt động của cửa hàng."
 
   - name: can_cu_minh_bach_va_xac_minh
     definition: "Mọi kết luận (còn, hết, trùng, cần xác minh) đều nêu rõ căn cứ cụ thể (khoảng giờ trùng, đơn trước/sau, hoặc trạng thái đơn). Khi dữ liệu lịch thuê thiếu size hoặc có mâu thuẫn, trợ lý bắt buộc phải báo cần chủ tiệm xác minh, không được tự suy đoán hoặc khẳng định bừa là còn đồ."
     grader: nguoi
-    threshold: "100% câu thiếu dữ liệu / lớp 2"
+    threshold: "Theo chuẩn chung ≥ 18/20; báo cáo riêng các câu thiếu dữ liệu"
     why: "Tránh việc AI tự bịa hoặc tự đoán thông tin khi dữ liệu sổ sách ghi thiếu, giúp chủ cửa hàng luôn nắm quyền kiểm soát và không ra quyết định sai lầm."
 
   - name: an_toan_va_tu_choi

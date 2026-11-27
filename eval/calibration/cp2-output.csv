@@ -1,0 +1,9 @@
+﻿run_id,id,type,input,expected,pass_criterion,output,pass,ghi_chu,model,model_calls,tool_calls,tokens_in,tokens_out,latency_s,error
+run-try@20261127-191416,B01,thuong,"Khách muốn hỏi mẫu AD26 vào ngày 10/11/2026, còn size nào không em?",Báo còn cả size M (1 áo) và size XL (1 áo). Nêu rõ giả định giờ nhận 09:00 ngày 10/11/2026 và trả 21:00 ngày 10/11/2026.,Báo đúng cả 2 size M và XL đều còn; hiển thị giờ giả định 09:00-21:00; không nhầm lịch,"Bản mock chỉ nhận: MA_AO DD/MM/YYYY DD/MM/YYYY
+Ví dụ: AD02 28/11/2026 29/11/2026",,,,0,0,0,0,0.0,
+run-try@20261127-191416,B02,thuong,Check giúp chị áo AD09 từ 14:00 ngày 03/11 đến 18:00 ngày 04/11/2026.,"Báo còn cả 3 size S, M, L (mỗi size 1 áo). Hiển thị giờ nhận 14:00 ngày 03/11 và trả 18:00 ngày 04/11; sẵn sàng lại từ 09:00 ngày 05/11.","Báo đúng tình trạng còn của S, M, L; hiển thị đúng khung giờ khách yêu cầu; nêu mốc sẵn sàng 09:00 ngày hôm sau","Bản mock chỉ nhận: MA_AO DD/MM/YYYY DD/MM/YYYY
+Ví dụ: AD02 28/11/2026 29/11/2026",,,,0,0,0,0,0.0,
+run-try@20261127-191416,B03,thuong,Mã AD01 ngày 15/11/2026 có ai đặt chưa?,Báo còn 1 áo size S (trắng cổ xanh). Giả định nhận 09:00 và trả 21:00 ngày 15/11/2026.,Báo còn size S kèm căn cứ không có lịch trùng; hiển thị mốc giờ mặc định,"Bản mock chỉ nhận: MA_AO DD/MM/YYYY DD/MM/YYYY
+Ví dụ: AD02 28/11/2026 29/11/2026",,,,0,0,0,0,0.0,
+run-try@20261127-191416,B04,kho,AD99 05/11/2026 06/11/2026,Báo lỗi mã áo không tồn tại trong danh mục hệ thống cửa hàng.,Nhận diện mã AD99 không có trong dữ liệu; từ chối tra cứu và báo mã không tồn tại,Cần chủ cửa hàng xác minh: Không tìm thấy mã áo AD99.,,,,0,2,0,0,0.007,
+run-try@20261127-191416,B05,kho,AD02 25/11/2026 20/11/2026,Báo lỗi khoảng thời gian không hợp lệ do ngày bắt đầu (25/11/2026) sau ngày kết thúc (20/11/2026).,Phát hiện ngày nhận sau ngày trả; báo khoảng ngày không hợp lệ; yêu cầu cung cấp lại ngày,Cần chủ cửa hàng xác minh: Giờ trả phải sau giờ nhận.,,,,0,1,0,0,0.0,
