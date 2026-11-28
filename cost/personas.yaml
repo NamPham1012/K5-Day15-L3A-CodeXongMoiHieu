@@ -1,52 +1,44 @@
 # Mô phỏng chi phí khi dùng thật — điền ở guide bước 4.2.
-# Ôn lại: ngày 13, ngày 1, ngày 14 · lab ngày 13, lab ngày 14.
-# Mọi số phải có nguồn (data / phỏng vấn / khảo sát / quy mô khoá có nguồn) hoặc ghi rõ "(tự ước tính)".
-# Chạy: python run.py simulate --try   (10 phiên, kiểm khung — làm trước CP3)
-#       python run.py simulate         (đủ số phiên dưới đây — bản nộp CP4)
+# Mọi số phải có nguồn (data / phỏng vấn / khảo sát) hoặc ghi rõ "(tự ước tính)".
+# Chạy: python run.py simulate --try   (10 phiên, kiểm khung — trước CP3)
+#       python run.py simulate --rate-from eval/run-2.csv   (50 phiên — bản nộp CP4)
 
 sessions: 50        # số phiên mô phỏng — bản nộp ≥50
 seed: 42            # giữ cố định để chạy lại ra cùng chuỗi phiên
 
-users:              # số người dùng thật — cửa hàng cho thuê áo dài nhỏ tại Hòa Lạc, track F
-                    # Quy mô: 1 chủ tiệm đang dùng (P1.md); scale ra: các tiệm thuê áo dài nhỏ tại HN
-  low: 1
-  base: 5
-  high: 20
-  source: "P1.md — phỏng vấn trực tiếp 1 chủ tiệm Hòa Lạc 27/11/2026; thấp=chỉ chủ tiệm đó; cơ sở=5 tiệm (tự ước tính: cùng quy mô phố Hòa Lạc); cao=20 tiệm (tự ước tính: nhân rộng ra khu vực)"
+users:              # quy mô người dùng: chủ cửa hàng / nhân viên tư vấn thuê áo dài tại khu vực Hòa Lạc & Hà Nội
+  low: 5            # 1 cửa hàng hiện tại + 4 cửa hàng lân cận (tự ước tính)
+  base: 20          # 20 cửa hàng cho thuê áo dài/trang phục nhỏ (tự ước tính)
+  high: 50          # 50 cửa hàng nếu mở rộng khu vực Hà Nội (tự ước tính)
+  source: "Track F — hiện tại 1 chủ cửa hàng trực tiếp (P1.md); quy mô mở rộng thấp (5), cơ sở (20), cao (50) là (tự ước tính) cho các tiệm cho thuê trang phục quản lý bằng Google Sheets."
 
-personas:           # 3 kiểu người dùng theo tần suất dùng; share cộng lại = 1.0
-  - name: hoi_thuong
-    share: 0.5
-    uses_per_month: 60
-    turns_per_session: 2
-    source: "P1.md — chủ tiệm cho biết khoảng 150 lượt hỏi/tháng, một nửa là hỏi đơn giản 1-2 câu (tự ước tính từ spec.md §2: ~5 lượt/ngày × 30 ngày)"
-    types: [thuong]
+personas:           # 3 kiểu tần suất hỏi của chủ cửa hàng / nhân viên tư vấn; share cộng lại = 1
+  - name: cua_hang_nho_ngay_thuong
+    share: 0.4
+    uses_per_month: 30        # ~1 phiên/ngày (tự ước tính)
+    turns_per_session: 2      # ~2 câu hỏi/phiên (tự ước tính)
+    source: "P1.md cho biết chủ quán tự tra lịch khi khách hỏi; tần suất ngày thường ~60 lượt/tháng là (tự ước tính)."
+  - name: cua_hang_vua_mua_chup_anh
+    share: 0.4
+    uses_per_month: 60        # ~2 phiên/ngày (tự ước tính)
+    turns_per_session: 3      # ~3 câu hỏi/phiên (~180 lượt/tháng, khớp mức ~150 lượt/tháng ở spec.md §2)
+    source: "Đối chiếu data đào (261 đơn hiệu lực / ~2 tháng ≈ 130 đơn/tháng tại 1 tiệm) và spec.md §2; số lượt hỏi ~180 lượt/tháng là (tự ước tính)."
+  - name: cua_hang_cao_diem_cuoi_tuan
+    share: 0.2
+    uses_per_month: 90        # ~3 phiên/ngày mùa kỷ yếu/Tết (tự ước tính)
+    turns_per_session: 4      # ~4 câu hỏi/phiên (tự ước tính)
+    source: "Mùa cao điểm cuối tuần/kỷ yếu khách hỏi nhiều size cùng lúc; tần suất ~360 lượt/tháng là (tự ước tính)."
 
-  - name: kiem_tra_kho
-    share: 0.35
-    uses_per_month: 40
-    turns_per_session: 3
-    source: "P1.md — khoảng 1/3 lượt hỏi liên quan kiểm tra lịch phức tạp (tình trạng trùng, thiếu size), ước tính từ 5 nhóm vượt tồn kho trong data-mining.md (tự ước tính)"
-    types: [kho]
-
-  - name: xu_ly_biet_le
-    share: 0.15
-    uses_per_month: 15
-    turns_per_session: 4
-    source: "data-mining.md — 37.9% dòng lịch bất thường; ước tính 15% phiên gặp tình huống đặc biệt: nhầm giờ, từ chối đơn, trả muộn (tự ước tính)"
-    types: [kho, tu_choi]
-
-prices:             # USD / 1 triệu token — nguồn từ trang giá chính thức của từng provider
+prices:             # USD / 1 triệu token — ≥2 mức model
   - model: gpt-4o-mini
     input: 0.15
     output: 0.60
-    source: "https://openai.com/api/pricing/ · xem 27/11/2026 — Input: $0.150/1M tokens, Output: $0.600/1M tokens"
-
+    source: "https://openai.com/api/pricing/ · kiểm tra 27/11/2026"
   - model: gpt-4o
     input: 2.50
     output: 10.00
-    source: "https://openai.com/api/pricing/ · xem 27/11/2026 — Input: $2.500/1M tokens, Output: $10.000/1M tokens"
+    source: "https://openai.com/api/pricing/ · kiểm tra 27/11/2026"
 
-usd_to_vnd:         # tỷ giá USD/VND để in thêm tiền Việt trong bản tóm tắt
-  rate: 25400
-  source: "Tỷ giá Vietcombank ngày 27/11/2026 (tự ước tính từ tỷ giá thị trường)"
+usd_to_vnd:
+  rate: 25500
+  source: "Tỷ giá tham khảo (tự ước tính), tháng 11/2026"
