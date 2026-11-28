@@ -98,7 +98,10 @@ flowchart LR
 
 ## §8. Chi phí khi dùng thật
 
-Cần ít nhất ba persona, mô phỏng ≥50 phiên thực qua bản chạy thử, ba kịch bản thấp/cơ sở/cao, hai mức model và chi phí trên task thành công. Hiện chưa có kết quả.
+Đã mô phỏng **50 phiên thực** (`seed = 42`, 0 phiên lỗi, Run ID `simulate-1@20261128-103625`) qua `python run.py simulate --rate-from eval/run-3.csv` với 3 persona (`cost/personas.yaml`), 3 kịch bản (5 / 20 / 50 cửa hàng) và 2 mức model (`gpt-4o-mini`, `gpt-4o`), tính trên tỉ lệ đạt thực tế **12/20 (60%)**:
+- **`gpt-4o-mini`:** `$0.0013` (≈ 34 ₫)/phiên · **`$0.0022` (≈ 56 ₫)/task thành công** · **`$0.0791` (≈ 2.016 ₫)/cửa hàng/tháng** (cơ sở 20 tiệm: `$1.58/tháng` ≈ 40.318 ₫).
+- **`gpt-4o`:** `$0.0221` (≈ 564 ₫)/phiên · **`$0.0368` (≈ 940 ₫)/task thành công** · `$1.32` (≈ 33.598 ₫)/cửa hàng/tháng (cơ sở 20 tiệm: `$26.35/tháng`).
+- Chi tiết bảng và so sánh với impact: xem `cost/cost-estimate.md` và `cost/simulate-1-summary.md`.
 
 ## §9. Rủi ro & an toàn
 
@@ -119,6 +122,7 @@ Không commit tên, số điện thoại, thông tin tài chính, nguyên Sheet/
 |---|---|---|
 | 27/11/2026 (sau CP2) | Đồng bộ trạng thái ở `README.md`, `docs/ai-usage.md`, `eval/README.md`; xóa công cụ mẫu `search_example` và cập nhật docstring trong `codebase/tools.py`. Giữ nguyên `eval/benchmark.csv`, `eval/metric_spec.yaml` và chuẩn đạt §7. | Xử lý các lỗi đồng bộ tài liệu và mã mẫu thừa phát hiện khi audit sau CP2 mà không thay đổi chuẩn đánh giá đã chốt. |
 | 27/11/2026 (chuẩn bị CP3) | Hoàn tất đào data (`evidence/count.py`, `evidence/data-mining.md`, `evidence/summary.md`); cập nhật bản trích cục bộ `data/rental.private.json` theo xác nhận cửa hàng (dòng 89 `AD09` trả `02/11/2026`, loại dòng 206 `AD09` `"Chỉ quần"` vì không giữ áo dài). | Đạt ngưỡng bằng chứng R1 trước CP3 và làm sạch dữ liệu `AD09` (giúp `B02`, `B07` khớp nguồn mà không sửa benchmark). |
+| 28/11/2026 (CP3 → CP4) | Mở rộng `don_lien_quan` trong `codebase/tools.py` (ghi nhận đơn vừa sẵn sàng cùng ngày), định dạng sẵn `can_cu_don_lien_quan`, tách `REFUSE_SYSTEM` và ưu tiên gọi tool khi bị tấn công bỏ qua lịch trong `codebase/agent.py`. Chạy `eval/run-2.csv` (trung gian) và `eval/run-3.csv` (chính thức). | Khắc phục nhóm lỗi thiếu căn cứ mốc giờ/quy tắc và tấn công bỏ qua lịch từ Lượt 1: nhóm mục tiêu đạt 4/4 (`B06, B12, B15, B18`), `tu_choi` đạt 3/3 (100%), tổng 10/20 (50%) → 12/20 (60%). |
 
 **Sau CP4**
 
