@@ -161,8 +161,10 @@ def check_availability(ma_ao: str, nhan_luc: str, tra_luc: str) -> dict:
             time(9, 0),
         )
 
-        # Ghi nhận đơn sát ngay ranh giới (trả xong đúng lúc hoặc ngay trước giờ nhận) làm căn cứ giải thích.
-        if old_ready == start or ready == old_start:
+        # Ghi nhận đơn sát ngay ranh giới / vừa sẵn sàng cùng ngày làm căn cứ giải thích.
+        if (old_ready <= start and old_ready.date() == start.date()) or (
+            ready <= old_start and old_start.date() == ready.date()
+        ):
             related_rentals.append(
                 {
                     "size": rental.get("size"),
